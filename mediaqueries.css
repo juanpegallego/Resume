@@ -1,0 +1,111 @@
+@media screen and (max-width: 600px){
+    .title-container, .title-container1{
+        left: 45%;
+        top: 5%;
+        transition: all .5;
+    }
+    .title-container, .title-container1 > h1,h3 {
+        padding: 10px;
+        font-size: .8em;
+        transition: all 1s;
+    }
+    #linkContacto{
+        font-size: 12px;
+        margin-top: 10px;   
+    }
+
+    .language-container{
+        top: 15%;
+    }
+    .language-container > a{
+        font-size: 10px;
+        top: 50%;
+        display: flex;
+
+        position: relative;
+        
+    }
+
+    .data-container a img {
+        width: 40px;
+        left: 50px;
+        height: 40px;
+        transition: all .5s
+        ;
+    }
+    .skills-container1 {
+         top: 6em; 
+    }
+
+    .skills-container1 > h1 {
+        font-size: 20px;
+        }
+
+    .skills-container1 > ul li img{
+        height: 50px;
+        width: 50px;
+    } 
+    .edu-container1 > h1
+    ,.exp-container > h1
+    ,.exp-container1 > h1 
+    ,.edu-container1 > h1
+    ,.info-container1 > h1
+    ,.info-container > h1 {
+        font-size: 20px;
+        
+
+    }
+    .edu-container1
+    ,.exp-container 
+    ,.exp-container1  
+    ,.edu-container1
+    ,.info-container1 
+    ,.info-container {
+        min-height: 65vh;
+        width: calc(99vw/3);
+        opacity: 100%;
+        
+    }
+    
+
+    .edu-container1,
+    .exp-container,
+    .exp-container1,
+    .data-container > span{
+        font-size: 15px;
+    }
+    
+
+    .ul-li{
+        font-size: 11px;
+        left: -20px;
+        position: relative;
+        top: 10px;
+    }
+    .info-container1,
+    .info-container > p {
+        font-size: 11px;
+       
+    }
+
+    .exp-span{
+        position: relative;
+        left: -20px;
+    }
+    .iconSkills:hover{
+        width: 30px;
+        height: 30px;
+        transition: all 1s;
+    }
+    #iconCss:hover::after,
+    #iconReact:hover::after,
+    #iconBootstrap:hover::after,
+    #iconHtml:hover::after,
+    #iconJs:hover::after,
+    #iconMysql:hover::after {
+        top: 0px;
+        font-size:18px;
+    }
+
+}
+

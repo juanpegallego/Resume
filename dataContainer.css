@@ -1,0 +1,72 @@
+.data-container{
+    display: none;
+    width: 20vw;
+    height: 15vh;
+    position: absolute;
+    top: 10px;
+    right: 20%;
+    margin: 5px;
+   justify-content: center;
+}
+.data-container > a > img{
+    padding: 10px;
+    flex-direction: row;
+    display: inline;
+    width: 50px;
+    height: 50px;
+    animation-delay: 1s;
+    position: relative;
+    animation-direction: normal;
+    animation-name: iconosContacto;
+    animation-iteration-count: infinite;    
+    animation-duration: 1.5s;  
+}
+
+@keyframes iconosContacto{
+    0%{
+        top: 0px;
+    }
+    33%{
+        top: -18px;
+    }
+    66%{
+        top: 0px;
+    }
+}
+#github{
+animation-delay: 0ms;
+}
+#lkdn{
+    animation-delay:400ms;
+}
+#mail{
+    animation-delay: 800ms;
+}
+
+ .data-container > a > img:hover{
+    animation-name: girarContacto;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-duration: 10s;
+    width: 65px;
+    height: 65px;
+    transition: all .5s;
+    
+} 
+
+#github:hover ::before{
+    
+    color: white;
+    position: relative;
+    top: -40px;
+    left: 50%;
+    width: 50px;
+    height: 30px;
+    background-color: whitesmoke;
+}
+
+@keyframes girarContacto{
+    0%{
+        transform: rotate(9000deg);
+    }
+}

@@ -1,0 +1,281 @@
+
+/* body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    font-family: Poppins;
+    overflow-x: hidden;
+    flex-direction: column;
+} */
+
+
+.innerImg{
+    width: 120px;
+    height: 120px;
+    background-image: url("https://i.ibb.co/HBgQsPJ/foto.jpg");
+    background-size: cover;
+    margin: auto;
+    border-radius: 40%;
+}
+
+.title-container{
+    display: block;
+   top: 10%;
+   width: 100%;    
+   left: 0%;       
+   position: absolute;
+}
+
+.title-container >h1, h3{          
+    text-align: center;
+    color: white;
+    text-shadow: 5px 1px 9px  rgb(111, 90, 190); 
+}
+
+.title-container1{
+    display: inline;
+    left: 30%;
+   top: 2%;
+   width: 100%;           
+   position: absolute;
+   color: white;   
+}
+
+.title-container1 > h3{
+    left: -18%;
+    top: 60%;    
+    position: absolute;   
+    }
+
+.title-container1 > h1{
+    left: -18%;
+    
+    position: relative; 
+}
+
+        
+
+.btn{
+    width: 100%;
+    height: 50%;             
+}
+
+.btn-container{
+    background-color: red;
+    width: 100%;
+    position: relative;
+    display: block;
+    top: 60%;
+}
+
+.edu-container, .info-container , .exp-container , .skills-container{
+    display: none;
+    }
+.edu-container1, .info-container1 , .exp-container1 , .skills-container1{
+    color: white;      
+}
+.img-container{
+    cursor: pointer;
+    border: 3px solid rgba(102, 51, 153, 0.473);
+    border-radius: 40%;
+    top: 30%;       
+    left: 46%;     
+    position: absolute;
+}
+
+.imgContainer1{
+    border: 3px solid rgba(102, 51, 153, 0.473);
+    border-radius: 40%;
+    position: absolute;
+    left: 1%;
+    top: 2%;
+    animation: imagen 3s;   
+}
+
+@keyframes imagen{
+    0%{ top: 30%;
+        left: 46%;  }    
+    50%{top: 2%;
+        left: 46%; 
+    }     
+}
+
+/* div > p {
+    padding:15px;    
+} */
+
+/* ----==============----ICONOS DE SKILLS------============---*/
+
+/* div  ul li img{
+    width: 70px;
+    height: 70px;
+    
+    border: 2px solid rgba(73, 66, 66, 0.479);
+    border-radius: 40%;
+    display: inline;
+    padding:5px;
+} */
+.skills-container,
+.skills-container1 h1{ 
+    font-size: 30px;
+}
+.iconSkills{
+    width: 70px;
+    height: 70px;
+    top: 0px;
+    position: relative;   
+    transition: all 1s;
+    display: inline;
+    padding:10px;
+}
+
+.iconSkills:hover{    
+    animation-name: iconos;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    width: 71px;    
+    height: 71px;
+    animation-delay: .2s;
+    transition: all 2.5s;  
+    cursor:pointer;           
+}
+
+@keyframes iconos{
+    0%{ transform: rotate(30deg);
+    }
+    50%{transform: rotate(-30deg);
+    }
+    100%{transform: rotate(30deg);
+    }
+}
+
+.icon-container1{
+    position: relative;
+    top: -20px;
+    transition: all 1s;
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    list-style:none    
+}
+
+
+/*-------------- iconos -----------*/
+
+ #iconCss:hover::after{         
+    left: auto;    
+    content: "Css3";
+    color: white;
+    display: block;       
+}
+
+ #iconReact:hover::after{    
+    left: auto;   
+    content: "React JS";
+    color: white;
+    display: block;
+} 
+#iconBootstrap:hover::after{    
+    left: auto;
+    content: "Bootstrap 4";
+    color: white;
+    display: block;
+}
+#iconHtml:hover::after{   
+    left: auto;
+    content: "HTML 5";
+    color: white;
+    display: block;
+}
+#iconJs:hover::after{    
+    left: auto;
+    content: "JS ECMAScript 6";
+    color: white;
+    display: block;
+}
+#iconMysql:hover::after{  
+    left: auto;
+    content: "SQL Mysql";
+    color: white;
+    display: block;
+}  
+
+
+/* --------FIN ICONOS DE SKILLS---------*/
+
+
+
+
+.container-contacto{
+    position: fixed;
+    display: flex;
+    top: 15%;
+    left: 84.5%;
+    justify-content: center;
+    align-items: center;        
+    font-family: Russo One, sans-serif;
+    z-index: 9;
+    
+}
+
+.linkContacto{
+    font-family: Russo One, sans-serif;
+    position: sticky;
+    color: white;
+    font-size: 20px;
+    top:0%;
+    text-align: center;
+   
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;           
+    color: rgb(216, 177, 2);
+    cursor: pointer;
+    box-shadow: 0px 0px 29px 20px rgb(57, 184, 243);
+    /* text-shadow: 10px 32px 52px 1px cyan; */
+    text-decoration: none;
+    border:2px solid;
+    width: 6.5em;    
+    top: auto;
+    border-radius: 0%;
+    padding: 4px;
+    animation-iteration-count: infinite;
+    animation-duration: 1.1s;
+    animation-direction: alternate-reverse;
+    animation-name: contacto;
+    background-color: cyan; 
+    z-index: 9;
+    opacity: 1;
+    
+}
+.container-contacto:hover{
+    box-shadow: 2px 0px 35px 20px rgb(57, 184, 243);
+    transition:all 2s;
+    font-weight: bolder;
+
+   
+}
+.container-contacto a:hover {
+    border: 3px ;
+    
+}
+
+@keyframes contacto{
+    0%{
+        box-shadow: 2px 0px 36px 1px rgb(57, 184, 243);
+    }
+    25%{
+        box-shadow: 1px .5px 26px 1px rgb(57, 184, 243);
+    }
+    55%{
+        box-shadow: 1px 0px 20px 1px rgb(67, 186, 241);
+    }
+    100%{
+        box-shadow: 2px 0px 25px 1px rgb(57, 184, 243);
+    }
+}

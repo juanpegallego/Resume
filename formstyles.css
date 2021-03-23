@@ -1,0 +1,183 @@
+*{  padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+body{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+            }
+
+.form-container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position:absolute;
+    margin-top: 5%;
+    top: 5%;
+    align-items: center;                      
+}
+
+form > input{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    background-color: transparent;
+    border: none;
+    color: white;            
+    border-bottom: 2px solid white;
+    margin: 15px;         
+    font-size: 15px;   
+}
+
+form > input:focus{
+    outline: none;
+    border: none;
+    border-bottom:2.5px solid rgb(55, 205, 243);             
+    transition: all .4s;
+}
+
+
+form > textarea {
+    background-color: transparent;
+    border: 2px solid white;
+    resize: none;
+    color:white ;
+    font-family: Poppins;
+    width: 100%;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+form > textarea:focus{
+    box-shadow: .5px 1.5px 20px 1.5px rgb(55, 205, 243);
+    outline: none;
+    transition: .2s;
+    border: .5px solid white; 
+    
+}
+form span {
+    font-size: 24px;
+    color: black;
+    display: block;
+    text-shadow:1px 1px 5px white; 
+    margin-bottom: 20px;
+    border-radius: 2%;
+    background-color: #fff;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; 
+}
+
+
+
+form button{
+    margin: 10px;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid white;
+    text-shadow:1px 1px 3px white; 
+    font-size: 15px;
+    cursor: pointer;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; 
+    margin-top: 20px;
+    color: black;            
+}
+
+form button:hover{
+    box-shadow: .5px  .5px 5px rgb(55, 205, 243);
+    transition: all .3s;
+    border: 2px solid rgb(55, 205, 243);
+    text-shadow:1px 1px 3px rgb(55, 205, 243); 
+}
+
+
+/* -------- NAV STYLES ----------*/
+
+.home-container {
+    width: 10%;    
+    height: 100px;   
+    position: absolute;
+    min-width: 150px;
+    display: block;
+    left: 15%;
+    top: 40%;
+    background-color: rgba(187, 188, 190, 0.733);
+    cursor: pointer;
+    display: flex;
+    box-shadow: 2px 1px 60px 1px rgba(255, 255, 255, 0.527);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    
+    
+}
+
+.home-container::before{
+    content: "";
+    width: 99%;    
+    top: 0%;
+    left: 0%;
+    border-radius: 10%;
+    box-shadow: 20px -20px 30px 5px yellow;
+    position: absolute;
+    height: 100%;
+    opacity: 10%;
+    animation-name: movimientoHome;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes movimientoHome {
+    0%{box-shadow: 1px -1px 30px 5px rgb(55, 205, 243);
+
+    }
+    25%{box-shadow: .75px 0px 30px 5px yellow;
+
+    }
+    50%{box-shadow: 1px 1px 90px 30px rgb(55, 205, 243);
+
+    }
+    75%{box-shadow: -.75px 1px 90px 50px rgb(255, 39, 172);
+
+    }
+    100%{box-shadow: 1px 2px 30px 5px yellow;
+        
+    }
+
+
+
+
+}
+.home-container a{
+    text-shadow: 4px 4px 40px 40px black;
+    letter-spacing: -3.5px;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+    text-decoration: none;
+    color: black;
+    width: 100%;    
+    display: inline-block;
+    background: rgba(5,5,0);
+    background: linear-gradient(20deg, rgba(0, 0, 0) 31%, rgb(214, 09, 109) 92%);
+    
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; 
+}
+
+
+.home-container:hover{
+    box-shadow: 1px 1px 70px 5px rgb(55, 205, 243);
+    transition: all .15s ease-out;
+    background-color: rgba(153, 145, 145, 0.808);   
+    font-weight: bold;
+    text-shadow: 2px 2px 60px 30px grey;   
+}
+
