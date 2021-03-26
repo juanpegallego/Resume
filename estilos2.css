@@ -221,6 +221,22 @@ body{
     
 }
 
+.info-container1 h1{
+   
+    position: relative;
+    top: 35%;
+    padding: 15px;
+    width: 50%;
+    margin: auto;
+    text-decoration: none;
+    border: 2px solid yellow;
+}
+.info-container1  a{
+    text-decoration: none;
+    color: white;
+}
+
+
 @keyframes efectoSkills{
 
     0%{        
@@ -359,7 +375,7 @@ body{
 }
 
 .edu-container1:hover > h1,
-.info-container1:hover > h1,
+
 .skills-container1:hover > h1,
 .exp-container1:hover > h1
 {
