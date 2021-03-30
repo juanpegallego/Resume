@@ -40,8 +40,9 @@ body{
     justify-content: center;
     align-items: center;
     width: 70%;  
+    border-radius: 5%;
     height: 80vh;    
-    background-color: rgba(0, 0, 0, 0.493);     
+    background-color: rgba(255, 255, 255, 0.507);     
     margin:30px auto;    
     transition: all 1s;
     
@@ -127,7 +128,7 @@ body{
     margin: auto 8px;    
     position: relative;
     background-color: transparent;    
-    background-color: rgb(226, 61, 61);
+    
 }
 .card-link:hover{
     box-shadow: 0px 0px 20px 5px rgb(255, 209, 5);
@@ -140,6 +141,7 @@ body{
 }
 .link-documentacion:hover{
     box-shadow: 0px 0px 20px 5px rgb(226, 61, 61);
+    
    
    
 }
