@@ -1,31 +1,29 @@
-const img = document.getElementById('innerImg').addEventListener('click', start)
+let btnstart = document.getElementById('btnstart').addEventListener('click', start)
 language();
 
 function start(){
-        document.getElementById('imgContainer').className = 'imgContainer1';
-        
+        document.getElementById('btnstart').style.display = 'none';
+        document.getElementById('imgContainer').className = 'imgContainer1';        
         setTimeout(() => {
-        document.getElementById('titleContainer').className = 'title-container1';
-        
-       }, 2900);     
+            document.getElementById('titleContainer').className = 'title-container1';
+                      
+            }, 2900);     
 
         setTimeout(() => { 
-        document.getElementById('info').className = 'info-container1';
-        document.getElementById('exp').className = 'exp-container1';
-        document.getElementById('skills').className = 'skills-container1';
-        document.getElementById('edu').className = 'edu-container1';
-        document.getElementById('iconContainer').className = 'icon-container1';
-        
-    }, 1500);
+            document.getElementById('info').className = 'info-container1';
+            document.getElementById('exp').className = 'exp-container1';
+            document.getElementById('skills').className = 'skills-container1';
+            document.getElementById('edu').className = 'edu-container1';
+            document.getElementById('iconContainer').className = 'icon-container1';        
+             }, 1500);
 
-    setTimeout(() => {
-        
+    setTimeout(() => {        
         document.getElementById('iconContainer').style.display = 'flex';
         document.getElementById('iconContainer').style.transition = 'all 4s';
         document.getElementById('dataContainer').style.display = 'flex';
-        document.getElementById('dataContainer').style.transition = 'all 4s';
-        
-    }, 5200);
+        document.getElementById('dataContainer').style.transition = 'all 4s'; 
+          
+         }, 5200);
     }
 
     

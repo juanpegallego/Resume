@@ -7,6 +7,7 @@ body{
     justify-content: center;
     align-items: center;    
     box-sizing: border-box;
+    flex-direction: column;
     background: rgb(21, 4, 24);
     background: linear-gradient(150deg, rgb(21, 5, 24) 80%, rgba(14, 10, 26, 0.919) 99%);
     font-family: Poppins;
@@ -229,7 +230,7 @@ body{
     width: 50%;
     margin: auto;
     text-decoration: none;
-    border: 2px solid yellow;
+    border: 2px solid rgb(255, 209, 5);
 }
 .info-container1  a{
     text-decoration: none;
@@ -384,3 +385,31 @@ body{
 }
 
 
+
+/*--------estilos del boton inicio-----------------*/
+
+.container-start{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -50px;
+    
+    width: 100%;
+}
+#btnstart{
+    letter-spacing: -1.5px;
+    cursor: pointer;
+    height: 50px;
+    width: 180px;
+    max-height: 50px;
+    max-width: 200px;
+    margin: auto;
+    font-size: 1.7rem;
+    border: none;
+    color: white;
+    border: 2px solid rgb(255, 209, 5);
+    background-color: transparent;
+    border-radius: 5%;
+}
