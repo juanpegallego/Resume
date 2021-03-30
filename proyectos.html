@@ -5,16 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="estilosProyectos.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mediaqueries_port.css">
     <title>Proyectos</title>
 </head>
 <body>
 
+    <div id="heroe">
+
+    </div>
     
 
     <div class="title-container" id="titleContainer">
         <h1>Juan Gallego</h1>
         <h3>Frontend Developer</h3>   
-        <a href="https://juanpegallego.github.io/Resume/index.html"
+        <a href="./index.html"
         class="btn-home">HOME</a> 
      </div>
     
@@ -25,7 +29,7 @@
         
 
         <a href="https://github.com/juanpegallego" target="_blank"  >
-            <img src="https://juanpegallego.github.io/Resume/iconos/github.png" alt="github" id="github">
+            <img src="https://juanpegallego.github.io/Resume/iconos/github.png" alt="github" id="github" >
         </a>
         
         <a href="https://www.linkedin.com/in/jpgallego/" target="_blank">
@@ -37,8 +41,8 @@
     </div>
 
     <div class="language-container">
-        <a href="https://juanpegallego.github.io/Resume/indexen.html" id="englishBtn" >English</a>
-        <a href=https://juanpegallego.github.io/Resume/index.html" id="spanishBtn" >Español</a>
+        <a href="https://juanpegallego.github.io/Resume/indexen.html" target="_blank" id="englishBtn" >English</a>
+        <a href=https://juanpegallego.github.io/Resume/index.html" target="_blank" id="spanishBtn" >Español</a>
     </div>
 
     <div class="img-container" id="imgContainer">
@@ -48,45 +52,44 @@
     </div>
 
 
-
     <div class="main-container">
 
-
-
-        <div class="card">
-            <div>
-                <h2 class="card-title" >
-                    Btcprice
-                </h2>
-            </div>
-            <div >
+        
+            <div class="card" id="project1">
+                <div>
+                    <h2 class="card-title" >
+                        Saldo Btc
+                    </h2>
+                </div>
+                <div>
+                    <a href="https://juanpegallego.github.io/Btcprize/"
+                    target="_blank"
+                     class="img-container" >
+                        <video src="/Imagenes Portfolio/Videos/btcprice 2.mp4"
+                        autoplay muted loop
+                        class="card-video"></video>
+                       </a>                
+                </div>            
+                <div class="link-container">
                 <a href="https://juanpegallego.github.io/Btcprize/"
-                 class="img-container" >
-                    <img src="./Imagenes Portfolio/btcprice.PNG"
-                     alt="">
-                   </a>                
-            </div>            
-           <p class="card-description" >
-            App para conocer de una manera muy simple y veloz, cuantos pesos argentinos valen tus bitcoins.
-            Use HTML, CSS, Vanilla Js y Bootstrap.
-           </p>
-           
-           <div class="link-container">
-            <a href="https://juanpegallego.github.io/Btcprize/"
-            class="card-link" >
-            Visitar web
-           </a>
-           <a href="https://github.com/juanpegallego/Btcprize"
-            class="card-link link-documentacion" >
-            Ir al repositorio
-           </a>
-           </div>
-
-           
+                target="_blank"
+                class="card-link" >
+                Visitar web
+               </a>
+               <a href="https://github.com/juanpegallego/Btcprize"
+                target="_blank"
+                class="card-link link-documentacion" >
+                Ir al Codigo 
+                <img src="/github.png" alt=""> 
+               </a>
+               </div>
+    
+               
+            
+    
+    
         </div>
-
-
-
+        
 
 
 
@@ -96,31 +99,33 @@
 
         <div class="card">
             <div>
-                <h2 class="card-title" >
-                    Snickers Cards
+                <h2 class="card-title" id="project2" >
+                    Tarjetas 
                 </h2>
             </div>
             <div >
                 <a href="https://juanpegallego.github.io/Shoes-Cards/"
+                target="_blank"
                  class="img-container" >
                     
-                    <img src="./Imagenes Portfolio/cardshoes.PNG"
-                     alt="">
+                    <video src="/Imagenes Portfolio/Videos/Snickers Cards.mp4"
+                    autoplay muted loop  class="card-video"></video>
                    </a>
                 
             </div>  
             
-           <p class="card-description" >
-            Tarjetas para venta de productos. Decoraciones y animaciones con puro HTML y CSS.
-           </p>
+           
            <div class="link-container">
             <a href="https://juanpegallego.github.io/Shoes-Cards/"
+            target="_blank"
             class="card-link" >
             Visitar Web
            </a>
            <a href="https://github.com/juanpegallego/Shoes-Cards"
+           target="_blank"
             class="card-link link-documentacion" >
-            Ir al repositorio
+            Ir al Codigo 
+            <img src="/github.png" alt=""> 
            </a>
            </div>
 
@@ -137,32 +142,34 @@
 
 
 
-
-        <div class="card">
+        <div class="card" id="project3">
             <div >
                 <h2 class="card-title" >
-                    Form Control
+                    Formulario de control
                 </h2>
             </div>
             <div >
                 <a href="https://juanpegallego.github.io/Basic-Form/"
+                target="_blank"
                  class="img-container" >
-                    <img src="./Imagenes Portfolio/formcontrol.PNG" alt="">
+                    <video src="/Imagenes Portfolio/Videos/Basic Form2.mp4"
+                    autoplay muted loop class="card-video"></video>
                    </a>
                 
             </div>
             
-           <p class="card-description" >
-            Formulario de login, realizado con HTML y CSS. Posee validaciones realizadas con Vanilla JS.
-           </p>
+           
            <div class="link-container">
             <a href="https://juanpegallego.github.io/Basic-Form/"
+            target="_blank"
             class="card-link" >
             Visitar Web
            </a>
            <a href="https://github.com/juanpegallego/Basic-Form"
+           target="_blank"
             class="card-link link-documentacion" >
-            Ir al repositorio
+            Ir al Codigo 
+            <img src="/github.png" alt=""> 
            </a>
            </div>
 
@@ -176,34 +183,35 @@
 
 
 
-
-        <div class="card">
+        <div class="card" id="project4">
             <div >
                 <h2 class="card-title" >
-                    Practise CRM
+                    Buscador de practica
 
                 </h2>
             </div>
             <div >
                 <a href="https://juanpegallego.github.io/practise-Crm/"
+                target="_blank"
                  class="img-container" >
-                    <img src="./Imagenes Portfolio/CRM.PNG" alt="">
+                    <video src="/Imagenes Portfolio/Videos/Practise CRM 2.mp4"
+                    autoplay muted loop class="card-video"></video>
                    </a>
                 
             </div>
             
-           <p class="card-description" >
-            Es un buscador muy simple y rapido basado en CRM, que arroja informacion sobre empresas y permite agregar nuevas.
-            Realizado con HTML, CSS, Vanilla JS y Bootstrap.
-           </p>
+          
            <div class="link-container">
                <a href="https://juanpegallego.github.io/practise-Crm/"
+               target="_blank"
             class="card-link" >
             Visitar Web
            </a>
            <a href="https://github.com/juanpegallego/practise-Crm"
+           target="_blank"
             class="card-link link-documentacion" >
-            Ir al repositorio
+            Ir al Codigo 
+            <img src="/github.png" alt=""> 
            </a>
            </div>
 
@@ -219,34 +227,35 @@
 
 
 
-
-        <div class="card">
+        <div class="card" id="project5" >
             <div>
                 <h2 class="card-title" >
-                    Sales Control
+                    Control de ventas
 
                 </h2>
             </div>
             <div >
                 <a href="https://juanpegallego.github.io/Control-de-ventas/"
+                target="_blank"
                  class="img-container" >
-                    <img src="./Imagenes Portfolio/salescontrol.PNG" alt="">
+                    <video src="/Imagenes Portfolio/Videos/Sales Board 2.mp4"
+                    autoplay muted loop class="card-video"></video>
                    </a>
                 
             </div>
             
-           <p class="card-description" >
-            App para ingresar info sobre ventas de manera dinamica. La idea surgio en mi actual empleo, donde las ventas las 
-            guardamos en archivos Excel.
-           </p>
+          
            <div class="link-container">
             <a href="https://juanpegallego.github.io/Control-de-ventas/"
+            target="_blank"
             class="card-link" >
             Visitar Web
            </a>
            <a href="https://github.com/juanpegallego/Control-de-ventas"
+           target="_blank"
             class="card-link link-documentacion" >
-            Ir al repositorio
+            Ir al Codigo 
+            <img src="/github.png" alt=""> 
            </a>
            </div>
            
@@ -255,6 +264,8 @@
         
     </div>
     
+    <script src="project.js"></script>
     
 </body>
 </html>
+

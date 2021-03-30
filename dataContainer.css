@@ -19,7 +19,7 @@
     animation-direction: normal;
     animation-name: iconosContacto;
     animation-iteration-count: infinite;    
-    animation-duration: 1.5s;  
+    animation-duration: 1700ms;  
 }
 
 @keyframes iconosContacto{
@@ -42,7 +42,9 @@ animation-delay: 0ms;
 #mail{
     animation-delay: 800ms;
 }
-
+#descarga{
+    animation-delay: 1200ms;
+}
  .data-container > a > img:hover{
     animation-name: girarContacto;
     animation-iteration-count: infinite;
@@ -70,3 +72,4 @@ animation-delay: 0ms;
         transform: rotate(9000deg);
     }
 }
+

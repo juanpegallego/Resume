@@ -9,22 +9,22 @@
 
 .title-container{
    display: block;
-   top: 10%;
-   width: 100%;    
-   left: 0%;       
-   position: absolute;
+   top: -10%;
+   width: 100%;  
+   position: relative;
+   margin: auto;
 }
 
 .title-container >h1, h3{          
     text-align: center;
     color: white;
-    text-shadow: 5px 1px 9px  rgb(111, 90, 190); 
+    text-shadow: 0px 0px 10px  rgb(111, 90, 190); 
 }
 
 .title-container1{
    display: inline;
    left: 30%;
-   top: 2%;
+   top: 2%;   
    width: 100%;           
    position: absolute;
    color: white;   
@@ -69,8 +69,8 @@
     cursor: pointer;
     border: 3px solid rgba(102, 51, 153, 0.473);
     border-radius: 40%;
-    top: 30%;       
-    left: 46%;     
+    top: 40%;        
+    margin: auto;
     position: absolute;
 }
 
@@ -78,8 +78,9 @@
     border: 3px solid rgba(102, 51, 153, 0.473);
     border-radius: 40%;
     position: absolute;
-    left: 1%;
-    top: 2%;
+    left: 1.5%;
+    top: 1.5%;
+    margin: auto;
     animation: imagen 3s;   
 }
 
