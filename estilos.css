@@ -64,7 +64,7 @@
 .exp-container1,
 .skills-container1{
     color: white;      
-}
+} 
 .img-container{
     cursor: pointer;
     border: 3px solid rgba(102, 51, 153, 0.473);
@@ -103,8 +103,9 @@
     position: relative;   
     display: inline;
     padding:10px;
-    transition: all 1s;   
+      
     margin: 0px 5px;
+    transition: all 1s;
 }
 
 .iconSkills:hover{    
@@ -119,57 +120,75 @@
 }
 
 @keyframes iconos{
-    0%{ transform: rotate(30deg);
+    0%{ 
+        transform: rotate(30deg);
+        
     }
-    50%{transform: rotate(-30deg);
+    50%{
+        transform: rotate(-30deg);
+        
     }
-    100%{transform: rotate(30deg);
+    100%{
+        transform: rotate(30deg);
+        
     }
 }
 
 .icon-container1{
     position: relative;
     top: -20px;
-    transition: all 1s;
+    
     display: flex;   
     justify-content: center;
     align-items: center; 
-    list-style:none    
+    flex-direction: row;
+    list-style:none;    
+    
+    transition: all 1s;
+
 }
 
  #iconCss:hover::after{      
     content: "Css3";
-    color: white;
-    display: block;       
+        
 }
 
  #iconReact:hover::after{    
     content: "React JS";
-    color: white;
-    display: block;
+    
 } 
 #iconBootstrap:hover::after{   
     content: "Bootstrap 4";
-    color: white;
-    display: block;
+   
 }
 #iconHtml:hover::after{ 
     content: "HTML 5";
-    color: white;
-    display: block;
+    
 }
 #iconJs:hover::after{      
     content: "JS ECMAScript 6";
-    color: white;
-    display: block;
+    
 }
 #iconMysql:hover::after{  
     content: "SQL Mysql";
-    color: white;
-    display: block;
+    
 }  
 
+#iconCss:hover::after,
+#iconMysql:hover::after,
+#iconJs:hover::after,
+#iconHtml:hover::after,
+#iconBootstrap:hover::after, #iconReact:hover::after,
+#iconCss:hover::after{
+    color: white;
+    display: block;
+}
 /* --------FIN ICONOS DE SKILLS---------*/
+
+
+
+
+
 
 
 

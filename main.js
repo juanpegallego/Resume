@@ -1,5 +1,5 @@
 let btnstart = document.getElementById('btnstart').addEventListener('click', start)
-language();
+language(),listenerToggle();
 
 function start(){
         document.getElementById('btnstart').style.display = 'none';
@@ -22,7 +22,7 @@ function start(){
         document.getElementById('iconContainer').style.transition = 'all 4s';
         document.getElementById('dataContainer').style.display = 'flex';
         document.getElementById('dataContainer').style.transition = 'all 4s'; 
-          
+        ;
          }, 5200);
     }
 
@@ -41,3 +41,40 @@ function start(){
         }
     }
     
+    function listenerToggle(){
+        document.getElementById('edu').addEventListener('click', () =>{
+            toggleContainer();
+            titleToggle()                      
+        })
+    }
+      
+
+
+    function toggleContainer(){
+        if (document.getElementById('edu-toggler').className == 'educacion-oculta'){
+             document.getElementById('edu-toggler').className = 'educacion-mostrar';
+        }
+        else if (document.getElementById('edu-toggler').className == 'educacion-mostrar'){
+            document.getElementById('edu-toggler').className = 'educacion-oculta';
+       }
+       
+         
+        }
+        
+   function titleToggle(){
+        if (document.getElementById('edu-title').className == 'edu-title-normal')
+        {document.getElementById('edu-title').className = 'edu-title-mostrar';
+            
+        }
+        else if (document.getElementById('edu-title').className == 'edu-title-mostrar')
+            {document.getElementById('edu-title').className = 'edu-title-normal';
+
+        } 
+
+   }     
+
+   function autoCloseEdu(){
+    document.getElementById('edu-title').className = 'edu-title-normal';
+    document.getElementById('edu-toggler').className = 'educacion-oculta';
+   }
+

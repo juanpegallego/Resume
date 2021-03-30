@@ -89,10 +89,9 @@ body{
 
 .skills-container,
 .exp-container,
-.edu-container{  
+.ocultarTitulo{  
     display: none;    
-    width: 0%;
-    
+    width: 0%;    
     text-align: center;    
 }
 
@@ -112,12 +111,16 @@ body{
     display: inline;
     top: 50%;
     opacity: 55%;      
-    z-index: 1;
+    z-index: 2;
     min-height: 56vh;
 }
 .edu-container1 li {
     list-style: none;
     text-align: left;
+}
+
+.edu-container1:hover{
+    opacity: 100%; 
 }
 @keyframes efecto{
     0%{ top: 60%;
@@ -141,12 +144,41 @@ body{
         opacity: 50%;
     }
 }
-
-.edu-container1 > span{
-    color: rgb(255, 209, 5);
-
+.edu-title-normal{
+    position: relative;
+    top: 35%;
+    padding: 15px;
+    width: 50%;
+    margin: auto;
+    text-decoration: none;
+    border: 2px solid rgb(255, 209, 5);
+    cursor: pointer;
+    transition: all 1.2s;
 }
 
+.edu-title-mostrar{
+    position: relative;
+    top: 30px;        
+    margin: auto;
+    text-decoration: none;
+    transition: all 1.2s;
+    
+}
+.educacion-oculta{
+    display: none;
+    transition: all 1s;
+} 
+.educacion-mostrar{
+    display: block;
+    position: relative;
+    top: 50px;
+    transition: all 1.5s;
+}
+.educacion-mostrar span{
+    color: yellow;
+    position: relative;
+    margin-top: 150px;
+}
 /*-------------EXPERIENCIA-----------------*/
 
 .exp-container1{
@@ -237,7 +269,6 @@ body{
     color: white;
 }
 
-
 @keyframes efectoSkills{
 
     0%{        
@@ -283,47 +314,15 @@ body{
     animation-name: efectoEdu;
     animation-duration: 3.7s;
     animation-timing-function: ease-out;
-    top: 13%;
+    top: 22%;
     left: 0%;
     width: 100vw;
     height: 28.2vh;
     display: inline;
     opacity: 80%;      
-    
+   
 }
-.skills-container1::after{
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 20%;
-    width: 60%;
-    background-color: transparent;
-    height: 120%;
-    border-radius: 50%;
-    box-shadow: 1px 1px 20px 10px rgba(255, 255, 255, 0.356);
-    z-index: -3; 
-    clip-path: fill-box;
-    animation: giroafter 4s infinite;
-    animation-delay: 8s;
 
-}
-@keyframes giroafter{
-   0%{
-    box-shadow: -10px 10px 20px 10px cyan;
-   }
-   25%{
-    box-shadow: 20px -10px 20px 10px cyan;
-   }
-   50%{
-    box-shadow: -10px 10px 20px 10px cyan;
-   }
-   75%{
-    box-shadow: 10px -10px 20px 10px cyan;
-   }
-   100%{
-    box-shadow: -10px 10px 20px 10px cyan;
-   }
-}
    
 
 @keyframes efectoEdu{
@@ -351,7 +350,7 @@ body{
     }
 }
 
-.edu-container1:hover,
+.ocultarTitulo:hover,
 .info-container1:hover,
 .skills-container1:hover,
 .exp-container1:hover {
@@ -375,15 +374,15 @@ body{
    
 }
 
-.edu-container1:hover > h1,
-
-.skills-container1:hover > h1,
-.exp-container1:hover > h1
-{
-   text-decoration: underline;    
-   transition: all 2s; 
-}
-
+/* .ocultarTitulo h1{
+    position: relative;
+    top: 35%;
+    padding: 15px;
+    width: 50%;
+    margin: auto;
+    text-decoration: none;
+    border: 2px solid rgb(255, 209, 5);    
+} */
 
 
 /*--------estilos del boton inicio-----------------*/
@@ -394,8 +393,7 @@ body{
     justify-content: center;
     align-items: center;
     position: relative;
-    top: -50px;
-    
+    top: -50px;    
     width: 100%;
 }
 #btnstart{
@@ -413,3 +411,5 @@ body{
     background-color: transparent;
     border-radius: 5%;
 }
+
+
