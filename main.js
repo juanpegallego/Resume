@@ -28,13 +28,13 @@ function start(){
 
     
     function language(){
-        if(window.location.pathname == "/Resume/index.html"){
+        if(window.location.pathname == "/Resume/index.html" && window.location.pathname == "/Resume/"){
             document.getElementById('spanishBtn').style.border = '2.5px solid rgb(255, 209, 5)';
             document.getElementById('spanishBtn').style.borderRadius = '25px';
             document.getElementById('spanishBtn').style.color ='rgb(255, 209, 5)';
             
         }
-        if ((window.location.pathname == "/Resume/indexen.html")){
+        if ((window.location.pathname == "/Resume/indexen.html" )){
             document.getElementById('englishBtn').style.border = '2.5px solid rgb(255, 209, 5)';
             document.getElementById('englishBtn').style.borderRadius = '25px';
             document.getElementById('englishBtn').style.color ='rgb(255, 209, 5)';
