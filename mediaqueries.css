@@ -1,10 +1,12 @@
 @media screen and (max-width: 600px){
-    .title-container, .title-container1{
+    .title-container,
+     .title-container1{
         left: 45%;
         top: 5%;
         transition: all .5;
     }
-    .title-container, .title-container1 > h1,h3 {
+    .title-container,
+     .title-container1 > h1,h3 {
         padding: 10px;
         font-size: .8em;
         transition: all 1s;
@@ -30,8 +32,7 @@
         width: 40px;
         left: 50px;
         height: 40px;
-        transition: all .5s
-        ;
+        transition: all .5s;
     }
     .skills-container1 {
          top: 6em; 
@@ -39,7 +40,7 @@
 
     .skills-container1 > h1 {
         font-size: 20px;
-        }
+    }
 
     .skills-container1 > ul li img{
         height: 50px;
@@ -51,8 +52,7 @@
     ,.edu-container1 > h1
     ,.info-container1 > h1
     ,.info-container > h1 {
-        font-size: 20px;
-        
+        font-size: 20px;       
 
     }
     .edu-container1
@@ -63,18 +63,15 @@
     ,.info-container {
         min-height: 65vh;
         width: calc(99vw/3);
-        opacity: 100%;
-        
-    }
-    
+        opacity: 100%;        
+    }   
 
     .edu-container1,
     .exp-container,
     .exp-container1,
     .data-container > span{
         font-size: 15px;
-    }
-    
+    }    
 
     .ul-li{
         font-size: 11px;
@@ -106,6 +103,19 @@
         top: 0px;
         font-size:18px;
     }
+    .edu-container1 h1{
+        font-size: .9em;
+        padding: 5px;        
+    }
+    .info-container1 h1 {
+        font-size: 1.3em;
+        padding: 5px;
+    }
 
+    .exp-container1 li{
+        font-size: .7rem;
+    
+    }
+    
 }
 
