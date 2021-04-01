@@ -136,16 +136,18 @@
 
 .icon-container1{
     position: relative;
-    top: -20px;
-    
+    top: -20px;    
     display: flex;   
     justify-content: center;
     align-items: center; 
     flex-direction: row;
-    list-style:none;    
-    
+    list-style:none;        
     transition: all 1s;
-
+}
+.icon-container1 li{
+   
+    width: 90px;
+    height: 90px;
 }
 
  #iconCss:hover::after{      
