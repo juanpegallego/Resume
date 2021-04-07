@@ -1,4 +1,5 @@
 let btnstart = document.getElementById('btnstart').addEventListener('click', start)
+let imgStart = document.getElementById('imgContainer').addEventListener('click', start)
 language(),listenerToggle();
 
 function start(){
