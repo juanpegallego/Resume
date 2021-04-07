@@ -1,5 +1,13 @@
 @media screen and (max-width: 600px){
-    .title-container,
+    
+    .title-container{
+        margin: 0;
+       
+    }
+    .container-start{
+        position: relative;
+        top: -230px;
+    }
      .title-container1{
         left: 45%;
         top: 5%;
@@ -23,19 +31,19 @@
         font-size: 10px;
         top: 50%;
         display: flex;
-
-        position: relative;
-        
+                
     }
 
     .data-container a img {
         width: 40px;
-        left: 50px;
+        left: 30px;
         height: 40px;
         transition: all .5s;
+        
     }
     .skills-container1 {
          top: 6em; 
+         
     }
 
     .skills-container1 > h1 {
@@ -116,6 +124,7 @@
         font-size: .7rem;
     
     }
+    
     
 }
 
