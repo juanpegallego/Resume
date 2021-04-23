@@ -8,7 +8,7 @@ body{
     align-items: center;    
     box-sizing: border-box;
     background: rgb(21, 4, 24);
-    background: linear-gradient(150deg, rgb(48, 15, 54) 80%, rgba(14, 10, 26, 0.919) 99%); 
+    background: linear-gradient(150deg, rgb(30, 9, 34) 80%, rgba(14, 10, 26, 0.919) 99%); 
     font-family: Poppins;
     min-height: 100vh;
     overflow-X: hidden;
@@ -43,8 +43,9 @@ body{
     max-width: 60vw;  
     border-radius: 5%;
     height: 80vh;    
-    background-color: rgba(255, 255, 255, 0.507);     
+    /* background-color: rgba(255, 255, 255, 0.664);   */   
     margin:30px auto;    
+    background-color: transparent;
     transition: all 1s;
     
     
@@ -56,7 +57,7 @@ body{
 
 .card-title{
     position: relative;
-    top: 50px;
+    top: -50px;
     font-size: 2rem;
     text-shadow: 0px 0px 30px white;
     text-decoration: underline;
@@ -64,19 +65,27 @@ body{
 }
 
 .img-container{    
-    top: -60px;
+    top: 0px;
+    
     position: relative;
     display: flex;    
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.container-video-link{
+    height: 300px;
+    position: relative;
+    display: flex;
+    top: -40px;
+    
+}
 
 .card-video{
     /* box-shadow: 0px 0px 40px 10px black; */
     margin: auto;
-    width: 550px;
-    height: 500px;
+    width: 80%;
+    height: 100%;
     border-radius: 10px;
     transition: .6s;
     
@@ -90,7 +99,7 @@ body{
 }
 .link-container{
     width: 100%;
-    top: -80px;
+    top: 10px;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -109,8 +118,10 @@ body{
     text-decoration: none;     
     padding: 0px 10px 0px 10px;  
     color: white;
+    border-radius: 10px;
+    background-color: black;
     border-bottom: 2px solid white;
-    border-bottom-color: rgb(255, 209, 5);
+    border-bottom-color: rgb(41, 16, 46);
 }
 
 .link-documentacion{       
@@ -247,9 +258,44 @@ body{
 .language-container a:hover{
     background-color: white;
     color: black;
-    
     transition: .4s;
     
 }
 
 
+#project1{
+    
+    
+    background-attachment: fixed; 
+    background-size: contain;
+    /* background-color: rgba(0, 0, 0, 0.301); */
+    backdrop-filter: grayscale(1);
+    background-image: url('bgc/Imagen Bitcoin.PNG');
+  
+    
+}
+#project2{
+    background-attachment: fixed; 
+    background-size: contain;
+    background-image: url('/bgc/Imagen Shoess.PNG');
+    
+    /* background-color: rgb(31, 62, 204);   */
+  
+}
+#project3{
+    background-attachment: fixed;
+    background-size: contain;
+    background-image: url('/bgc/Imagen Form.PNG');
+    
+    
+}
+#project4{
+    background-attachment: fixed;
+    background-size: contain;
+    background-image: url('/bgc/Imagen CRM.PNG')
+}
+#project5{
+    background-attachment: fixed;
+    background-size: contain;
+    background-image: url('/bgc/Imagen\ Sales.PNG')
+}
