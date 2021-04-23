@@ -47,7 +47,8 @@ body{
     margin:30px auto;    
     background-color: transparent;
     transition: all 1s;
-    
+    background-attachment: fixed; 
+    background-size: contain;
     
 }
 .card:hover{
@@ -263,39 +264,18 @@ body{
 }
 
 
-#project1{
-    
-    
-    background-attachment: fixed; 
-    background-size: contain;
-    /* background-color: rgba(0, 0, 0, 0.301); */
-    backdrop-filter: grayscale(1);
+#project1{   
     background-image: url('bgc/Imagen Bitcoin.PNG');
-  
-    
 }
 #project2{
-    background-attachment: fixed; 
-    background-size: contain;
     background-image: url('/bgc/Imagen Shoess.PNG');
-    
-    /* background-color: rgb(31, 62, 204);   */
-  
 }
 #project3{
-    background-attachment: fixed;
-    background-size: contain;
     background-image: url('/bgc/Imagen Form.PNG');
-    
-    
 }
 #project4{
-    background-attachment: fixed;
-    background-size: contain;
     background-image: url('/bgc/Imagen CRM.PNG')
 }
 #project5{
-    background-attachment: fixed;
-    background-size: contain;
-    background-image: url('/bgc/Imagen\ Sales.PNG')
+    background-image: url('/bgc/Imagen Sales.PNG')
 }

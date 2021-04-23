@@ -1,7 +1,13 @@
+//inicializa animacion divs con fctn start
+
 let btnstart = document.getElementById('btnstart').addEventListener('click', start)
 let imgStart = document.getElementById('imgContainer').addEventListener('click', start)
+
+//Inicializo funcion recuadro amarillo selector idiomas
 language(),listenerToggle();
 
+
+//animaciones divs
 function start(){
         document.getElementById('btnstart').style.display = 'none';
         document.getElementById('imgContainer').className = 'imgContainer1';        
@@ -27,7 +33,7 @@ function start(){
          }, 5200);
     }
 
-    
+    //Selector border de lenguaje segun el path
     function language(){
         if(window.location.pathname == "/Resume/index.html" && window.location.pathname == "/Resume/"){
             document.getElementById('spanishBtn').style.border = '2.5px solid rgb(255, 209, 5)';
@@ -42,6 +48,9 @@ function start(){
         }
     }
     
+
+
+    //---------------Arranca toggler para ocultar y mostrar Info de Educacion
     function listenerToggle(){
         document.getElementById('edu').addEventListener('click', () =>{
             toggleContainer();
