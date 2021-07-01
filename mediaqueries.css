@@ -1,0 +1,76 @@
+@media (max-width: 600px) {
+
+    nav {
+        top: 30px;
+        width: 100%;
+    }
+    nav ul {
+        width: 60%;
+        left: 20%;
+    }
+    nav ul li a{
+        font-size: 1.7rem;
+    }
+    .hi-container {
+        left: 5%;
+        top:25%;
+    }
+    
+    .hi-container h3 {
+        font-size: 2rem;
+    }
+    .hi-container span {
+        font-size: 1.5rem;
+    }
+    .container-img{
+        width: 100px;
+        height: 100px;
+        top: 5%;
+        left: 5%;
+    }
+    .carousel {
+        width: 100%;
+        left: 0%;
+        top: 25vh;
+        padding: 15px;
+    }
+
+    .container-about,
+    .container-projects,
+    .container-contact {
+        width: 100%;
+        position: relative;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .container-about p{
+        line-height: normal ;
+    }
+
+    .container-projects {
+        height: 30vh;
+        top: 150px;
+        position: relative;
+    }
+    .container-projects p{
+        text-align: center;
+    }
+
+
+    .container-about h1,
+    .container-projects h1,
+    .container-contact h1
+     {
+        font-size: 4rem;
+        position: relative;
+        text-align: center;
+    }
+
+
+
+
+    }
