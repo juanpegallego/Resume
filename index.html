@@ -11,7 +11,8 @@
     <title>Juan Gallego - Web Developer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="mediaqueries.css">
-    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body>
@@ -27,51 +28,50 @@
                 <a href="#contact">Contact</a>
             </li>
             <li class="language">
-                <a href="indexEs.html" >Español</a>
+                <a href="indexEs.html">Español</a>
             </li>
         </ul>
     </nav>
 
-        <div class="hi-container">
-            <h3 id="hola" >Hi !</h3> <br>
-            <h3 class="active">Im Juan Gallego</h3>
-            <span class="active">Web Developer</span>
-            
-        </div>
-    
-        <div class="data-container">
-    
-    
-            <a href="https://github.com/juanpegallego" target="_blank">
-                <img src="https://juanpegallego.github.io/Resume/iconos/github.png" alt="github" id="github">
-            </a>
-    
-            <a href="https://www.linkedin.com/in/jpgallego/" target="_blank">
-                <img src="https://juanpegallego.github.io/Resume/iconos/linkedin.png" alt="lkdn" id="lkdn">
-            </a>
-            <a href="mailto:gallegojpe@gmail.com" target="_blank">
-                <img src="https://juanpegallego.github.io/Resume/iconos/mail.png" alt="" id="mail">
-            </a>
-        </div>
-    
-        <div class="container-img active">
-            <div class="img">
-            </div>
-        </div>
-  
-    
+    <div class="hi-container">
+        <h3 id="hola">Hi !</h3> <br>
+        <h3 class="active">Im Juan Gallego</h3>
+        <span class="active">Web Developer</span>
 
-    <div class="carousel active " >
+    </div>
+
+    <div class="data-container">
+
+        <a href="https://github.com/juanpegallego" target="_blank">
+            <img src="./Imagenes/png/github.png" alt="github" id="github">
+        </a>
+
+        <a href="https://www.linkedin.com/in/jpgallego/" target="_blank">
+            <img src="./Imagenes/png/linkedin.png" alt="lkdn" id="lkdn">
+        </a>
+        <a href="mailto:gallegojpe@gmail.com" target="_blank">
+            <img src="./Imagenes/png/gmail.png" alt="" id="mail">
+        </a>
+    </div>
+
+    <div class="container-img active">
+        <div class="img">
+        </div>
+    </div>
+
+
+
+    <div class="carousel active ">
         <div class="container-about" id="about">
-            <div class="about" >
+            <div class="about">
                 <h1>
                     About
                 </h1>
                 <p>
-                    I am  a web developer, currently living in Buenos Aires, Argentina . <br>
+                    I am a web developer, currently living in Buenos Aires, Argentina . <br>
                     Work at Banco Macro as customer executive and freelance web developer. <br>
                     Below u can download my resume in pdf format.
-                    
+
                 </p>
                 <a href="./Cv Juan Gallego.pdf" download class="download">Download Resume</a>
             </div>
@@ -93,7 +93,7 @@
         <div class="container-contact" id="contact">
             <div class="contact">
                 <h1>Contact</h1>
-                <form action="" class="form">
+                <form action="" class="form" id="form">
                     <input type="text" placeholder="Name">
                     <input type="email" placeholder="Email">
                     <textarea name="" id="" cols="30" rows="5" placeholder="Write your message here"></textarea>
@@ -102,10 +102,24 @@
             </div>
         </div>
     </div>
-<script>
-        
+    <script>
+        const form = document.getElementById('form');
 
-</script>
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            aviso()
+        })
+
+        const aviso = () => {
+            Swal.fire({
+                title: 'Error!',
+                text: 'It seems like the server is not working properly.',
+                icon: 'error',
+                confirmButtonText: 'Oops! Ok '
+            })
+        }
+
+    </script>
 
 </body>
 
