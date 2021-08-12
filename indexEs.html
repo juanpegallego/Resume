@@ -9,16 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Gallego - Desarrollador Web</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="mediaqueries.css">
-    
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="mediaqueries.css">    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>   
 </head>
 
 <body>
     <nav class="active">
         <ul>
             <li>
-                <a href="#about">Acerca</a>
+                <a href="#about">Acerca de mi</a>
             </li>
             <li>
                 <a href="https://juanpegallego.github.io/Resume/proyectos" target="_blank">Proyectos</a>
@@ -67,13 +69,52 @@
                 </h1>
                 <p>
                     Soy un desarrollador web viviendo en Buenos Aires, Argentina. <br>
-                    Trabajo en Banco Macro como ejecutivo de clientes y desarrollo proyectos web de manera freelance. <br>
-                    Aqui debajo podes descargar mi curriculum completo en formato pdf.
+                    Actualmente trabajo en Banco Macro como ejecutivo de clientes y desarrollo proyectos web de manera freelance. <br>
+                    Debajo podras descargar mi curriculum completo en formato pdf.
                     
                 </p>
                 <a href="./Cv Juan Gallego.pdf" download class="download">Descargar curriculum</a>
             </div>
+            <ion-icon name="chevron-down-outline" class="arrow_icon"></ion-icon>
+        </div>
+        <div class="container-tech" id="tech">
+            <h1>
+                Tecnologias Principales
+            </h1>
+            <div class="container-bars">
+                <div class="bar">
+                    <span class="name">React Js</span>
+                    <div class="progress react"></div>
+                    <ion-icon name="rocket-outline" class="rocket"></ion-icon>
 
+                </div>
+                <div class="bar">
+                    <span class="name">Javascript</span>
+                    <div class="progress js"></div>
+                    <ion-icon name="rocket-outline" class="rocket"></ion-icon>
+
+                </div>
+                <div class="bar">
+                    <span class="name">Node Js</span>
+                    <div class="progress node"></div>
+                    <ion-icon name="rocket-outline" class="rocket"></ion-icon>
+
+                </div>
+                <div class="bar">
+                    <span class="name">CSS - SASS</span>
+                    <div class="progress css"></div>
+                    <ion-icon name="rocket-outline" class="rocket"></ion-icon>
+
+                </div>
+                <div class="bar">
+                    <span class="name">HTML</span>
+                    <div class="progress html"></div>
+                    <ion-icon name="rocket-outline" class="rocket"></ion-icon>
+
+                </div>
+
+
+            </div>
         </div>
         <div class="container-projects" id="projects">
             <div class="projects">
