@@ -92,12 +92,12 @@ nav {
     height: 100%;
     border-radius: 50%;
     background-color: black;
-    background: url(/Imagenes/foto.jpg);
+    background: url(./Imagenes/foto.jpg);
     background-position-y: top;
     background-size: cover;
     transition: all .5s; }
     .container-img .img:hover {
-      background: url(/Imagenes/foto2.PNG);
+      background: url(./Imagenes/foto2.PNG);
       background-position-y: top;
       background-position-x: center;
       background-size: contain;
