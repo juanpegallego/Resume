@@ -77,7 +77,7 @@
                 </p>
                 <a href="./Cv Juan Gallego.pdf" download class="download">Download Resume</a>
             </div>
-            <ion-icon name="chevron-down-outline" class="arrow_icon"></ion-icon>
+            <ion-icon name="chevron-down-outline" class="arrow_icon"  id="arrowIcon"></ion-icon>
         </div>
         <div class="container-tech" id="tech">
             <h1>
@@ -140,32 +140,16 @@
             <div class="contact">
                 <h1>Contact</h1>
                 <form action="" class="form" id="form">
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Email">
-                    <textarea name="" id="" cols="30" rows="5" placeholder="Write your message here"></textarea>
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea name="" id="" cols="30" rows="5" placeholder="Write your message here" required></textarea>
                     <button>Send</button>
                 </form>
             </div>
         </div>
     </div>
-    <script>
-        const form = document.getElementById('form');
-
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            aviso()
-        })
-
-        const aviso = () => {
-            Swal.fire({
-                title: 'Error!',
-                text: 'It seems like the server is not working properly.',
-                icon: 'error',
-                confirmButtonText: 'Oops! Ok '
-            })
-        }
-
-    </script>
+    <script src="main.js"></script>
+    
 
 </body>
 
