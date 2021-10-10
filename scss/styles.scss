@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
 * {
     padding: 0px;
     margin: 0px;
@@ -6,6 +9,12 @@
     font-family: roboto, 'Comic Sans';
 }
 
+$titulos : rgb(150, 150, 150);
+$Principal :#3e5bc1;
+
+body{
+    overflow: hidden;
+}
 /* ------------- NAV ---------------*/
 
 nav {
@@ -16,6 +25,8 @@ nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background-color: transparent;
+    
     ul {
         width: 40%;
         left: 30%;
@@ -29,9 +40,9 @@ nav {
             text-decoration: none;
             color: black;
             &:hover{
-                color: rebeccapurple;
-                transition: all .5s;
-                text-decoration: underline rebeccapurple;
+                color: $Principal;
+                transition: all .2s;
+                text-decoration: underline $Principal;
             }
             &:visited{
                 color: black;
@@ -56,18 +67,19 @@ nav {
     justify-content: center;
     flex-direction: row;
     align-items: center;
-    position: fixed;
+    position: absolute;
     min-width: 200px;
-    top: 80vh;
-    left: 90px;
+    top: 75vh;
+    left:80px;
     padding: 5px;
     a{
         color: transparent;
     }
     img{
         margin: 0px 10px;
-        width: 50px;    
-        height: 50px;
+        width: 40px;    
+        height: 40px;
+        
         &:hover{            
             animation-name: girarContacto;
             animation-iteration-count: infinite;
@@ -76,9 +88,15 @@ nav {
             
         }
         &:hover #mail{
-            width: 50px;
-            height: 59px;
+            width: 45px;
+            height: 45px;
         }
+        
+
+    }
+    #mail{
+        width: 43px;
+        height: 50px;
     }
 }
 
@@ -139,20 +157,40 @@ nav {
 
 /* -----------CAROUSEL -------- */
 .carousel {
-    width: 55%;
-    left: 40%;
+    width: 70%;
+    left: 30%;
     top: 0vh;
     position: relative;
     overflow-y: scroll;
+    overflow-x: hidden;
     height: 90vh;
     cursor: pointer;
     scroll-snap-type: y mandatory;
     scroll-behavior: auto;
 }
 
-.carousel::-webkit-scrollbar {
-    display: none;
-}
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #3e5bc1 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 25px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #d1cfcf86;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: rgb(43,43,45);
+    background: linear-gradient(0deg, rgba(43,43,45,1) 36%, rgb(32, 45, 94) 90%);
+    border-radius: 12px;
+    border: 1px solid black;
+  }
 
 
 
@@ -177,7 +215,7 @@ nav {
         text-align: left;
     }
     p{
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 }
 
@@ -186,12 +224,50 @@ nav {
 /*----------------POSICION CONTAINERS---------------------*/
 
 .container-about{
-    top: -80px;
+    top: 0px;
+    min-height: 100vh;
+    .about{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+       p{
+           width: 70%;
+           position: relative;
+       }
+        
+    }
+   
+
+    .download{
+        font-size: 1.5rem;
+        text-decoration: none;
+        position:relative;
+        color: $Principal;
+        width: 25%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;        
+        padding: 5px;
+        left: 0px;
+        margin: 100px auto;
+        border: 1px solid $Principal;
+        ion-icon{
+            font-size: 2.5rem;
+        }
+        &:hover{
+            background: rgb(43,43,45);
+            background: linear-gradient(90deg, rgba(43,43,45,1) 36%, rgb(32, 45, 94) 90%);
+            color: white;
+        }
+    }
     .arrow_icon{
         font-size: 7rem;
         z-index: 99;
-        top: 100px;
+        top: 0px;
         position: relative;
+        color: $titulos;
         &:hover{
             animation: flecha infinite .5s ease-in-out;
         }
@@ -206,32 +282,16 @@ nav {
     }
 }
 
-.container-projects {
-    position: relative;
-    a {
-        position: relative;
-        text-decoration: none;
-        top: -100px;
-        &:hover{
-            letter-spacing: -3px;
-            transition: all 1s;
-        }
-        &:visited{
-            color: black;
-        }
-    }
-    p {
-        position: relative;
-        top: -90px;
-    }
-}
+
 
 .container-tech{
     display: flex;
     width: 100%;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
+    top: 0px;
+    
         .container-bars{
             top: -50px;
             position: relative;
@@ -260,7 +320,7 @@ nav {
                     font-size: 3.3rem;
                     position: absolute;
                     right:45px;
-                    color: rebeccapurple;
+                    color: $Principal;
                     animation: planetRotation 1s infinite ease-in-out;
                     display: none;
                 }
@@ -271,18 +331,18 @@ nav {
                     left: 1px;
                     z-index: 2;
                     transform: rotate(45deg);
-                    color: rebeccapurple;
+                    color: $Principal;
                 }
                 .name{
                     z-index: 9999;
                     font-size: 1.3rem;
                     position: absolute;
-                    color: black;
+                    color: white;
                     font-weight: bold;
                     margin-left: 5px;
                 }
                 .progress{
-                    background-image: linear-gradient(to right, #fc793dd3, #faf35d, #f7f882, #f6fca3, #f7ffc3); 
+                    background-image: linear-gradient(to right, #0d1329, #151e41, rgb(49, 69, 141),#3e5bc1,#3e5bc1); 
                     border-radius: .5rem;    
                     z-index: 3;
                     height: 15px;
@@ -338,114 +398,198 @@ nav {
 }
 
 
-
-
-.container-contact {
-    display: flex;
-    justify-content: left;
-    flex-direction: column;
-    align-items: center;
+.container-projects {
+    .projects{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        
+        a{
+            font-size: 1.5rem;
+            text-decoration: none;
+            position:relative;
+            color: $Principal;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;        
+            padding: 5px;
+            left: 0px;
+            margin: 100px auto;
+            border: 1px solid $Principal;
+            ion-icon{
+                font-size: 2.5rem;
+                padding-right: 10px;
+            }
+        &:hover{
+            background: rgb(43,43,45);
+            background: linear-gradient(90deg, rgba(43,43,45,1) 36%, rgb(32, 45, 94) 90%);
+            color: white;
+            ::after{
+                position: absolute;
+                left: 0px;
+                top: 100px;
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                content: ' ';
+            }
+            
+        }
+        
+        } 
+       
+    }
+   
 }
+
+
 
 .projects,
 .about,
 .contact {
     width: 100%;
-    p{
-        position: relative;
-        top: 50px;
-        width: 100%;
-        line-height: 40px;
-    }
+    
 }
 
 
-.download{
-    font-size: 2rem;
-    text-decoration: underline;
-    position: relative;
-    color: black;
-    top: 100px;
-    left: 0px;
-    color:rgb(26, 26, 83);
+.container-tech h1,
+.container-projects h1,
+.container-contact h1,
+.container-about h1{
+            font-size: 3.5rem;
+            color: $titulos;            
+            position: relative;
+            background-color: rgb(216, 215, 215);
+            box-shadow: inset 0px 0px 20px rgb(236, 234, 234);
+            border-radius: 4rem;
+            padding: 5px 20px;            
+            font-family:Lato, sans-serif;
+            z-index: 99;
+           
+            
+}
+
+.container-tech ,
+.container-projects ,
+.container-contact ,
+.container-about {
+    
+    &:hover h1{
+        box-shadow: none;
+                transition: box-shadow .5s;
+                color: white;
+    }
 }
 
 
 /*----------------FORM---------------------*/
 
-.form {
-    top: 20px;
-    position: relative;
+
+.contact{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100%;
-    left: 0px;
-    input {
-        width: 60%;
-        height: 40px;
-        font-size: 2rem;
-        margin: 20px 0px;
-        border: none;
-        border-bottom: 2px solid black;
-        &:focus{
-
+    
+    .form {
+        top: 20px;
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        left: 0px;
+        padding-bottom: 150px;
+        input {
+            width: 60%;
+            height: 40px;
+            font-size: 2rem;
+            margin: 20px 0px;
             border: none;
-            outline: none;
-            border-bottom:2px solid black;
+            border-bottom: 1px solid black;
+            &:focus{
+    
+                border: none;
+                outline: none;
+                border-bottom:2px solid black;
+            }
+            &::placeholder{
+                color: black;
+                font-size: 2rem;
+                padding-left: 5px;
+            }
         }
-        &::placeholder{
-            color: black;
+        .left_container{
+            width: 60%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: left;
+            flex-direction: column;
+            label{
+                font-size: 2rem;
+                display: block;
+                position: relative;
+                border: 1px solid black;
+                padding-left: 5px;
+                width: 200px;
+                display: flex;
+                justify-content: center;
+                background-color: black;
+                color: white;
+              
+            }
+            select{
+                cursor: pointer;
+                font-size: 1.8rem;
+                display: flex;
+                margin-top: 25px;
+                flex-direction: row;
+                width: 60%;
+                &::placeholder{
+                    color: black;
+                    font-size: 2rem;
+                    padding-left: 5px;
+                }
+                option{
+                    font-size: 1.8rem;
+                }
+            }
+        }
+        
+        textarea {
+            margin-top: 20px;
             font-size: 2rem;
-            padding-left: 5px;
+            position: relative;
+            width: 60%;
+            padding: 4px 10px;
+            resize: none;
+            border: 1px solid black;
+            &::placeholder{
+                color: black;
+                font-size: 2rem;
+                padding: 5px;
+            }
         }
-    }
-    textarea {
-        margin-top: 20px;
-        font-size: 2rem;
-        position: relative;
-        width: 60%;
-        padding: 4px 10px;
-        resize: none;
-        border: 2px solid black;
-        &::placeholder{
-            color: black;
+        button{
+            position: relative;
+            top: 10px;
+            width: 20%;
+            height: 50px;
             font-size: 2rem;
-            padding: 5px;
-        }
-    }
-    button{
-        position: relative;
-        top: 10px;
-        width: 20%;
-        height: 50px;
-        font-size: 2rem;
-        cursor: pointer;
-        color: black;
-        border: 2px solid black;
-        background-color: transparent;
-        &:hover{            
-            background-color: black;
-            color: white;
-            transition:  all .4s;
+            cursor: pointer;
+            color: black;
+            border: 1px solid black;
+            background-color: transparent;
+            &:hover{            
+                background-color: black;
+                color: white;
+                transition:  all .4s;
+            }
         }
     }
 }
 
-#hola {
-    animation: movimientoSaludo 2 2s;
-}
-@keyframes movimientoSaludo {
-    0%{
-        
-        font-size: inherit;
-    }
-    50%{
-        font-size: 8rem;
-        margin-bottom: 100px;
-    }
-    100%{
-        font-size: inherit;
-    }
-}
+

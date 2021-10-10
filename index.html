@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Gallego - Web Developer</title>
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="mediaqueries.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -70,12 +69,16 @@
                     About
                 </h1>
                 <p>
-                    I am a web developer, currently living in Buenos Aires, Argentina . <br>
-                    Work at Banco Macro as customer executive and freelance web developer. <br>
-                    Below u can download my resume in pdf format.
+                    I am a web developer, currently living in Buenos Aires, Argentina . <br> I am passionate about web page design
+                    mainly using React, sass and javascript.<br>
+                    If you would like to know more about me, below you can download my curriculum in pdf format.
 
                 </p>
-                <a href="./Cv Juan Gallego.pdf" download class="download">Download Resume</a>
+
+
+                <a href="./Cv Juan Gallego.pdf" download class="download">
+                    <ion-icon name="download-outline"></ion-icon>
+                    Download PDF Resume</a>
             </div>
             <ion-icon name="chevron-down-outline" class="arrow_icon"  id="arrowIcon"></ion-icon>
         </div>
@@ -125,24 +128,48 @@
         </div>
         <div class="container-projects" id="projects">
             <div class="projects">
+                <h1>
+                    Projects
+                </h1>
                 <a href="https://juanpegallego.github.io/Resume/proyectos" target="_blank">
-                    <h1>
-                        Projects
-                    </h1>
+                    <ion-icon name="push-outline"></ion-icon>
+                        Click here to visit my latest projects
+                    
                 </a>
-                <p>
-                    Click above to visit my latest projects
-                </p>
+                
+                
             </div>
 
         </div>
         <div class="container-contact" id="contact">
             <div class="contact">
                 <h1>Contact</h1>
-                <form action="" class="form" id="form">
+                <form action="https://formsubmit.co/gallegojpe@gmail.com" class="form" method="POST" >
                     <input type="text" placeholder="Name" required>
                     <input type="email" placeholder="Email" required>
-                    <textarea name="" id="" cols="30" rows="5" placeholder="Write your message here" required></textarea>
+                    
+
+                    <div class="left_container">
+                        <label for="currency">Budget</label>
+                        <select name="currency" id="">
+                            <option value="pesos"> $ Argentinian Pesos</option>
+                            <option value="dolares">U$D Dollars</option>
+                        </select>
+                        <input type="number"placeholder="Estimated amount"  name="budget" >
+                    </div>
+                    
+                    <div class="left_container">
+                        <label for="project type">Type of project</label>
+                        <select name="project type" id="">
+                            <option value="">Fixed term contract</option>
+                            <option value="">Web page deploy  </option>
+                            <option value="">Web page design & deploy</option>
+                            <option value="">Lets just talk</option>
+                        </select>
+                    </div>
+
+                    
+                    <textarea name="" id="" cols="30" rows="4" placeholder="More details and information here." required></textarea>
                     <button>Send</button>
                 </form>
             </div>

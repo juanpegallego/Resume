@@ -1,9 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
   font-size: 10px;
   font-family: roboto, 'Comic Sans'; }
+
+body {
+  overflow: hidden; }
 
 /* ------------- NAV ---------------*/
 nav {
@@ -13,7 +17,8 @@ nav {
   height: 80px;
   display: flex;
   justify-content: space-evenly;
-  align-items: center; }
+  align-items: center;
+  background-color: transparent; }
   nav ul {
     width: 40%;
     left: 30%;
@@ -27,9 +32,9 @@ nav {
       text-decoration: none;
       color: black; }
       nav ul li a:hover {
-        color: rebeccapurple;
-        transition: all .5s;
-        text-decoration: underline rebeccapurple; }
+        color: #3e5bc1;
+        transition: all .2s;
+        text-decoration: underline #3e5bc1; }
       nav ul li a:visited {
         color: black; }
 
@@ -43,25 +48,28 @@ nav {
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  position: fixed;
+  position: absolute;
   min-width: 200px;
-  top: 80vh;
-  left: 90px;
+  top: 75vh;
+  left: 80px;
   padding: 5px; }
   .data-container a {
     color: transparent; }
   .data-container img {
     margin: 0px 10px;
-    width: 50px;
-    height: 50px; }
+    width: 40px;
+    height: 40px; }
     .data-container img:hover {
       animation-name: girarContacto;
       animation-iteration-count: infinite;
       animation-fill-mode: forwards;
       animation-duration: 10s; }
     .data-container img:hover #mail {
-      width: 50px;
-      height: 59px; }
+      width: 45px;
+      height: 45px; }
+  .data-container #mail {
+    width: 43px;
+    height: 50px; }
 
 @keyframes girarContacto {
   0% {
@@ -106,18 +114,35 @@ nav {
 
 /* -----------CAROUSEL -------- */
 .carousel {
-  width: 55%;
-  left: 40%;
+  width: 70%;
+  left: 30%;
   top: 0vh;
   position: relative;
   overflow-y: scroll;
+  overflow-x: hidden;
   height: 90vh;
   cursor: pointer;
   scroll-snap-type: y mandatory;
   scroll-behavior: auto; }
 
-.carousel::-webkit-scrollbar {
-  display: none; }
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #3e5bc1 #ffffff; }
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 25px; }
+
+*::-webkit-scrollbar-track {
+  background: #d1cfcf86; }
+
+*::-webkit-scrollbar-thumb {
+  background: #2b2b2d;
+  background: linear-gradient(0deg, #2b2b2d 36%, #202d5e 90%);
+  border-radius: 12px;
+  border: 1px solid black; }
 
 .container-about,
 .container-projects,
@@ -145,16 +170,46 @@ nav {
   .container-projects p,
   .container-tech p,
   .container-contact p {
-    font-size: 2rem; }
+    font-size: 1.8rem; }
 
 /*----------------POSICION CONTAINERS---------------------*/
 .container-about {
-  top: -80px; }
+  top: 0px;
+  min-height: 100vh; }
+  .container-about .about {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 100%; }
+    .container-about .about p {
+      width: 70%;
+      position: relative; }
+  .container-about .download {
+    font-size: 1.5rem;
+    text-decoration: none;
+    position: relative;
+    color: #3e5bc1;
+    width: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+    left: 0px;
+    margin: 100px auto;
+    border: 1px solid #3e5bc1; }
+    .container-about .download ion-icon {
+      font-size: 2.5rem; }
+    .container-about .download:hover {
+      background: #2b2b2d;
+      background: linear-gradient(90deg, #2b2b2d 36%, #202d5e 90%);
+      color: white; }
   .container-about .arrow_icon {
     font-size: 7rem;
     z-index: 99;
-    top: 100px;
-    position: relative; }
+    top: 0px;
+    position: relative;
+    color: #969696; }
     .container-about .arrow_icon:hover {
       animation: flecha infinite .5s ease-in-out; }
 @keyframes flecha {
@@ -162,27 +217,13 @@ nav {
     transform: translateY(8px); }
   100% {
     transform: translateY(0px); } }
-.container-projects {
-  position: relative; }
-  .container-projects a {
-    position: relative;
-    text-decoration: none;
-    top: -100px; }
-    .container-projects a:hover {
-      letter-spacing: -3px;
-      transition: all 1s; }
-    .container-projects a:visited {
-      color: black; }
-  .container-projects p {
-    position: relative;
-    top: -90px; }
-
 .container-tech {
   display: flex;
   width: 100%;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
-  flex-direction: row; }
+  flex-direction: row;
+  top: 0px; }
   .container-tech .container-bars {
     top: -50px;
     position: relative;
@@ -210,7 +251,7 @@ nav {
         font-size: 3.3rem;
         position: absolute;
         right: 45px;
-        color: rebeccapurple;
+        color: #3e5bc1;
         animation: planetRotation 1s infinite ease-in-out;
         display: none; }
       .container-tech .container-bars .bar .rocket {
@@ -219,16 +260,16 @@ nav {
         left: 1px;
         z-index: 2;
         transform: rotate(45deg);
-        color: rebeccapurple; }
+        color: #3e5bc1; }
       .container-tech .container-bars .bar .name {
         z-index: 9999;
         font-size: 1.3rem;
         position: absolute;
-        color: black;
+        color: white;
         font-weight: bold;
         margin-left: 5px; }
       .container-tech .container-bars .bar .progress {
-        background-image: linear-gradient(to right, #fc793dd3, #faf35d, #f7f882, #f6fca3, #f7ffc3);
+        background-image: linear-gradient(to right, #0d1329, #151e41, #31458d, #3e5bc1, #3e5bc1);
         border-radius: .5rem;
         z-index: 3;
         height: 15px;
@@ -261,95 +302,153 @@ nav {
     box-shadow: 0px 0px 20px 1px white, -5px 0px 15px 2px grey, -5px 0px 15px 2px #555151; }
   100% {
     width: 100%; } }
-.container-contact {
+.container-projects .projects {
   display: flex;
-  justify-content: left;
+  justify-content: space-evenly;
+  align-items: center;
   flex-direction: column;
-  align-items: center; }
+  height: 100%; }
+  .container-projects .projects a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    position: relative;
+    color: #3e5bc1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+    left: 0px;
+    margin: 100px auto;
+    border: 1px solid #3e5bc1; }
+    .container-projects .projects a ion-icon {
+      font-size: 2.5rem;
+      padding-right: 10px; }
+    .container-projects .projects a:hover {
+      background: #2b2b2d;
+      background: linear-gradient(90deg, #2b2b2d 36%, #202d5e 90%);
+      color: white; }
+      .container-projects .projects a:hover ::after {
+        position: absolute;
+        left: 0px;
+        top: 100px;
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        content: ' '; }
 
 .projects,
 .about,
 .contact {
   width: 100%; }
-  .projects p,
-  .about p,
-  .contact p {
-    position: relative;
-    top: 50px;
-    width: 100%;
-    line-height: 40px; }
 
-.download {
-  font-size: 2rem;
-  text-decoration: underline;
+.container-tech h1,
+.container-projects h1,
+.container-contact h1,
+.container-about h1 {
+  font-size: 3.5rem;
+  color: #969696;
   position: relative;
-  color: black;
-  top: 100px;
-  left: 0px;
-  color: #1a1a53; }
+  background-color: #d8d7d7;
+  box-shadow: inset 0px 0px 20px #eceaea;
+  border-radius: 4rem;
+  padding: 5px 20px;
+  font-family: Lato, sans-serif;
+  z-index: 99; }
+
+.container-tech:hover h1,
+.container-projects:hover h1,
+.container-contact:hover h1,
+.container-about:hover h1 {
+  box-shadow: none;
+  transition: box-shadow .5s;
+  color: white; }
 
 /*----------------FORM---------------------*/
-.form {
-  top: 20px;
-  position: relative;
+.contact {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  width: 100%;
-  left: 0px; }
-  .form input {
-    width: 60%;
-    height: 40px;
-    font-size: 2rem;
-    margin: 20px 0px;
-    border: none;
-    border-bottom: 2px solid black; }
-    .form input:focus {
+  flex-direction: column; }
+  .contact .form {
+    top: 20px;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    left: 0px;
+    padding-bottom: 150px; }
+    .contact .form input {
+      width: 60%;
+      height: 40px;
+      font-size: 2rem;
+      margin: 20px 0px;
       border: none;
-      outline: none;
-      border-bottom: 2px solid black; }
-    .form input::placeholder {
-      color: black;
+      border-bottom: 1px solid black; }
+      .contact .form input:focus {
+        border: none;
+        outline: none;
+        border-bottom: 2px solid black; }
+      .contact .form input::placeholder {
+        color: black;
+        font-size: 2rem;
+        padding-left: 5px; }
+    .contact .form .left_container {
+      width: 60%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: left;
+      flex-direction: column; }
+      .contact .form .left_container label {
+        font-size: 2rem;
+        display: block;
+        position: relative;
+        border: 1px solid black;
+        padding-left: 5px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        color: white; }
+      .contact .form .left_container select {
+        cursor: pointer;
+        font-size: 1.8rem;
+        display: flex;
+        margin-top: 25px;
+        flex-direction: row;
+        width: 60%; }
+        .contact .form .left_container select::placeholder {
+          color: black;
+          font-size: 2rem;
+          padding-left: 5px; }
+        .contact .form .left_container select option {
+          font-size: 1.8rem; }
+    .contact .form textarea {
+      margin-top: 20px;
       font-size: 2rem;
-      padding-left: 5px; }
-  .form textarea {
-    margin-top: 20px;
-    font-size: 2rem;
-    position: relative;
-    width: 60%;
-    padding: 4px 10px;
-    resize: none;
-    border: 2px solid black; }
-    .form textarea::placeholder {
-      color: black;
+      position: relative;
+      width: 60%;
+      padding: 4px 10px;
+      resize: none;
+      border: 1px solid black; }
+      .contact .form textarea::placeholder {
+        color: black;
+        font-size: 2rem;
+        padding: 5px; }
+    .contact .form button {
+      position: relative;
+      top: 10px;
+      width: 20%;
+      height: 50px;
       font-size: 2rem;
-      padding: 5px; }
-  .form button {
-    position: relative;
-    top: 10px;
-    width: 20%;
-    height: 50px;
-    font-size: 2rem;
-    cursor: pointer;
-    color: black;
-    border: 2px solid black;
-    background-color: transparent; }
-    .form button:hover {
-      background-color: black;
-      color: white;
-      transition: all .4s; }
-
-#hola {
-  animation: movimientoSaludo 2 2s; }
-
-@keyframes movimientoSaludo {
-  0% {
-    font-size: inherit; }
-  50% {
-    font-size: 8rem;
-    margin-bottom: 100px; }
-  100% {
-    font-size: inherit; } }
+      cursor: pointer;
+      color: black;
+      border: 1px solid black;
+      background-color: transparent; }
+      .contact .form button:hover {
+        background-color: black;
+        color: white;
+        transition: all .4s; }
 
 /*# sourceMappingURL=styles.css.map */

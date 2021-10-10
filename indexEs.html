@@ -10,10 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Gallego - Desarrollador Web</title>
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="mediaqueries.css">    
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>   
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -29,17 +28,17 @@
                 <a href="#contact">Contacto</a>
             </li>
             <li class="language">
-                <a href="index.html" >English</a>
+                <a href="index.html">English</a>
             </li>
         </ul>
 
 
     </nav>
     <div class="hi-container">
-        <h3 id="hola" >Hola !</h3> <br>
+        <h3 id="hola">Hola !</h3> <br>
         <h3 class="active">Soy Juan Gallego</h3>
         <span class="active">Desarrollador Web</span>
-        
+
     </div>
 
     <div class="data-container">
@@ -61,19 +60,23 @@
         </div>
     </div>
 
-    <div class="carousel active " >
+    <div class="carousel active ">
         <div class="container-about" id="about">
-            <div class="about" >
+            <div class="about">
                 <h1>
                     Acerca de mi
                 </h1>
                 <p>
-                    Soy un desarrollador web viviendo en Buenos Aires, Argentina. <br>
-                    Actualmente trabajo en Banco Macro como ejecutivo de clientes y desarrollo proyectos web de manera freelance. <br>
+                    Soy un desarrollador web, actualmente vivo en Buenos Aires, Argentina. <br> Me apasiona el diseño de
+                    páginas web.
+                    principalmente usando React, sass y javascript. <br>
                     Debajo podras descargar mi curriculum completo en formato pdf.
-                    
+
                 </p>
-                <a href="./Cv Juan Gallego.pdf" download class="download">Descargar curriculum</a>
+                <a href="./Cv Juan Gallego.pdf" download class="download">
+                    <ion-icon name="download-outline"></ion-icon>
+                    Descargar curriculum
+                </a>
             </div>
             <ion-icon name="chevron-down-outline" class="arrow_icon"></ion-icon>
         </div>
@@ -117,48 +120,56 @@
             </div>
         </div>
         <div class="container-projects" id="projects">
+
             <div class="projects">
+                <h1>
+                    Proyectos
+                </h1>
                 <a href="https://juanpegallego.github.io/Resume/proyectos" target="_blank">
-                    <h1>
-                        Proyectos
-                    </h1>
+                    <ion-icon name="push-outline"></ion-icon>
+                    Cliquea aqui para visitar mis proyectos
                 </a>
-                <p>
-                    Cliquea arriba para visitar mis proyectos
-                </p>
+
             </div>
 
         </div>
         <div class="container-contact" id="contact">
             <div class="contact">
                 <h1>Contacto</h1>
-                <form action="" class="form" id="form">
-                    <input type="text" placeholder="Nombre" readonly>
-                    <input type="email" placeholder="Correo electronico" required>
-                    <textarea name="" id="" cols="30" rows="5" placeholder="Escribi aqui tu mensaje" required></textarea>
+                <form action="https://formsubmit.co/gallegojpe@gmail.com" class="form" method="POST">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="email" placeholder="Email" required>
+
+                    <div class="left_container">
+                        <label for="currency">Presupuesto</label>
+                        <select name="currency" id="">
+                            
+                            <option value="pesos"> $ Pesos Argentinos</option>
+                            <option value="dolares">U$D Dolares</option>
+                        </select>
+                        <input type="number" placeholder="Monto estimado" name="budget">
+                    </div>
+                    <div class="left_container">
+                        <label for="project type">Tipo de proyecto</label>
+                        <select name="project type" id="">
+                            <option value="">Relacion de dependencia</option>
+                            <option value="">Desarrollo pagina web </option>
+                            <option value="">Diseño y desarrollo pagina web</option>
+                            <option value="">Solo hablemos</option>
+                        </select>
+                    </div>
+
+
+                    
+                    <textarea name="" id="" cols="30" rows="4" placeholder="Detalles e informacion aquí"
+                        required></textarea>
                     <button>Enviar</button>
                 </form>
             </div>
         </div>
     </div>
-    <script>
-        const form = document.getElementById('form');
+    <script src="main.js"></script>
 
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            aviso()
-        })
-
-        const aviso = () => {
-            Swal.fire({
-                title: 'Error!',
-                text: 'Parece que el servidor no esta funcionando correctamente.',
-                icon: 'error',
-                confirmButtonText: 'Uh! Ok '
-            })
-        }
-
-    </script>
 
 </body>
 
