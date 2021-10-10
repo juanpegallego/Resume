@@ -136,13 +136,14 @@
         <div class="container-contact" id="contact">
             <div class="contact">
                 <h1>Contacto</h1>
-                <form action="https://formsubmit.co/gallegojpe@gmail.com" class="form" method="POST">
-                    <input type="text" placeholder="Nombre" required>
-                    <input type="email" placeholder="Email" required>
+                <form action="https://formsubmit.co/gallegojpe@gmail.com" 
+                    class="form" method="POST" target="_blank" >
+                    <input type="text" placeholder="Nombre" name="name" required>
+                    <input type="email" placeholder="Email" name="email" required>
 
                     <div class="left_container">
                         <label for="currency">Presupuesto</label>
-                        <select name="currency" id="">
+                        <select name="currency" >
                             
                             <option value="pesos"> $ Pesos Argentinos</option>
                             <option value="dolares">U$D Dolares</option>
@@ -151,17 +152,18 @@
                     </div>
                     <div class="left_container">
                         <label for="project type">Tipo de proyecto</label>
-                        <select name="project type" id="">
-                            <option value="">Relacion de dependencia</option>
-                            <option value="">Desarrollo pagina web </option>
-                            <option value="">Diseño y desarrollo pagina web</option>
-                            <option value="">Solo hablemos</option>
+                        <select name="project type">
+                            <option value="Relacion de dependencia">Relacion de dependencia</option>
+                            <option value="Desarrollo pagina web">Desarrollo pagina web </option>
+                            <option value="Diseño y desarrollo pagina web">Diseño y desarrollo pagina web</option>
+                            <option value="Solo hablemos">Solo hablemos</option>
                         </select>
                     </div>
 
 
                     
-                    <textarea name="" id="" cols="30" rows="4" placeholder="Detalles e informacion aquí"
+                    <textarea name="message"  cols="30" rows="4" 
+                        placeholder="Detalles e informacion aquí"
                         required></textarea>
                     <button>Enviar</button>
                 </form>
