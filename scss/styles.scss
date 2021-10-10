@@ -248,6 +248,7 @@ nav {
         left: 0px;
         width: 92%;
         margin: auto;
+        height: 60vh;
      }
 }
 
@@ -555,7 +556,10 @@ nav {
             padding: 5px 20px;            
             font-family:Lato, sans-serif;
             z-index: 99;
-           
+           text-align: center;
+           @media screen and (max-width: $small) {
+            font-size: 2.5rem;
+        }
             
 }
 
@@ -600,6 +604,9 @@ nav {
             margin: 10px 0px;
             border: none;
             border-bottom: 1px solid black;
+            @media screen and (max-width: $small) {
+                width: 90%;
+            }
             &:focus{
     
                 border: none;
@@ -618,6 +625,9 @@ nav {
             justify-content: space-evenly;
             align-items: left;
             flex-direction: column;
+            @media screen and (max-width: $small) {
+                width: 90%;
+            }
             label{
                 font-size: 2rem;
                 display: block;
@@ -638,6 +648,9 @@ nav {
                 margin-top: 25px;
                 flex-direction: row;
                 width: 60%;
+                @media screen and (max-width: $small) {
+                    font-size: 1.5rem;
+                 }
                 &::placeholder{
                     color: black;
                     font-size: 2rem;
