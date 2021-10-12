@@ -488,25 +488,27 @@ nav {
 
 
 .container-projects {
+    max-height: 25vh;
     .projects{
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         flex-direction: column;
         height: 100%;
-        
         a{
             font-size: 1.5rem;
             text-decoration: none;
-            position:relative;
-            color: $Principal;
+            position:relative;            
             display: flex;
-            justify-content: space-evenly;
-            align-items: center;        
-            padding: 5px;
+            justify-content:center;
+            flex-direction: row;
+            align-items: center;       
             left: 0px;
+            color: $Principal;
             margin: 100px auto;
             border: 1px solid $Principal;
+            padding: 5px;
+
             ion-icon{
                 font-size: 2.5rem;
                 padding-right: 10px;
@@ -515,7 +517,8 @@ nav {
             background: rgb(43,43,45);
             background: linear-gradient(90deg, rgba(43,43,45,1) 36%, rgb(32, 45, 94) 90%);
             color: white;
-            ::after{
+            
+           /*  ::after{
                 position: absolute;
                 left: 0px;
                 top: 100px;
@@ -523,7 +526,7 @@ nav {
                 height: 200px;
                 background-color: red;
                 content: ' ';
-            }
+            } */
             
         }
         
@@ -631,15 +634,19 @@ nav {
             label{
                 font-size: 2rem;
                 display: block;
-                position: relative;
-                border: 1px solid black;
+                position: relative;/* 
+                border: 1px solid black; */
                 padding-left: 5px;
                 width: 200px;
                 display: flex;
                 justify-content: center;
                 background-color: black;
-                color: white;
-              
+                border-radius: 1rem;
+            background-color: rgb(216, 215, 215);
+                /////
+                color: black;
+              font-family:Lato, sans-serif;
+              color: white;
             }
             select{
                 cursor: pointer;
@@ -687,7 +694,8 @@ nav {
             border: 1px solid black;
             background-color: transparent;
             &:hover{            
-                background-color: black;
+                background: rgb(43,43,45);
+                background: linear-gradient(90deg, rgba(43,43,45,1) 36%, rgb(32, 45, 94) 90%);
                 color: white;
                 transition:  all .4s;
             }
