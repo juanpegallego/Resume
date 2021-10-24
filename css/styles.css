@@ -24,19 +24,81 @@ nav {
   top: 0px;
   position: relative;
   width: 100%;
-  height: 40px;
+  height: 50px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: transparent; }
+  animation: navAnimation 1 .5s ease-in-out; }
+@keyframes navAnimation {
+  0% {
+    transform: translateY(-50px); }
+  100% {
+    transform: translateY(0px); } }
+  nav .data-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    min-width: 180px;
+    left: 300px;
+    background-color: white;
+    border-radius: 2rem; }
+    @media screen and (max-width: 600px) {
+      nav .data-container {
+        position: relative;
+        top: 150px;
+        left: -80px;
+        height: 200px;
+        min-width: 30px;
+        justify-content: space-evenly;
+        width: 50px;
+        flex-direction: row; } }
+    nav .data-container a {
+      color: transparent; }
+    nav .data-container img {
+      margin: 0px 10px;
+      width: 30px;
+      height: 30px; }
+      @media screen and (max-width: 600px) {
+        nav .data-container img {
+          width: 25px;
+          height: 25px; } }
+      nav .data-container img:hover {
+        animation-name: girarContacto;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        animation-duration: 10s; }
+      nav .data-container img:hover #mail {
+        width: 25px;
+        height: 25px; }
+    nav .data-container #mail {
+      width: 32px;
+      height: 40px; }
+      @media screen and (max-width: 600px) {
+        nav .data-container #mail {
+          width: 35px;
+          height: 30px; } }
   nav ul {
     width: 40%;
-    left: 30%;
+    left: 10%;
     display: flex;
     justify-content: space-evenly;
     position: relative;
     list-style: none;
-    background-color: transparent; }
+    background-color: transparent;
+    height: 100%;
+    align-items: center; }
+    nav ul ::before {
+      position: absolute;
+      left: -50%;
+      top: 0;
+      content: '';
+      width: 200%;
+      height: 100%;
+      z-index: -1;
+      background-image: linear-gradient(to right, #0d1329, #151e41, #13204e, #314796, #2c4292);
+      border-bottom-left-radius: 5rem; }
     @media screen and (max-width: 600px) {
       nav ul {
         text-align: right;
@@ -52,85 +114,92 @@ nav {
       font-size: 2rem;
       font-weight: bold;
       text-decoration: none;
-      color: black; }
+      color: white; }
       @media screen and (max-width: 600px) {
         nav ul li a {
           font-size: 1.8rem; } }
       nav ul li a:hover {
-        color: #3e5bc1;
+        color: white;
         transition: all .2s;
         text-decoration: underline #3e5bc1; }
       nav ul li a:visited {
-        color: black; }
+        color: white; }
 
 .language {
   color: #1a1a53;
   text-decoration: underline 1px; }
 
 /*-----------link redes-------------------*/
-.data-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  position: absolute;
-  min-width: 200px;
-  top: 75vh;
-  left: 15vh;
-  padding: 5px; }
-  @media screen and (max-width: 600px) {
-    .data-container {
-      position: relative;
-      top: 150px;
-      left: -80px;
-      height: 200px;
-      min-width: 30px;
-      justify-content: space-evenly;
-      width: 50px;
-      flex-direction: row; } }
-  .data-container a {
-    color: transparent; }
-  .data-container img {
-    margin: 0px 10px;
-    width: 40px;
-    height: 40px; }
-    @media screen and (max-width: 600px) {
-      .data-container img {
-        width: 30px;
-        height: 30px; } }
-    .data-container img:hover {
-      animation-name: girarContacto;
-      animation-iteration-count: infinite;
-      animation-fill-mode: forwards;
-      animation-duration: 10s; }
-    .data-container img:hover #mail {
-      width: 45px;
-      height: 45px; }
-  .data-container #mail {
-    width: 43px;
-    height: 50px; }
-    @media screen and (max-width: 600px) {
-      .data-container #mail {
-        width: 35px;
-        height: 40px; } }
-
 @keyframes girarContacto {
   0% {
     transform: rotate(9000deg); } }
 /*------------CONTAINER SALUDO-----------------*/
 .hi-container {
   position: absolute;
-  left: 15vh;
-  top: 55%;
-  transition: .6s; }
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  left: 0px;
+  top: 25%;
+  min-height: 50vh;
+  transition: .6s;
+  background: #2b2b2d;
+  background: linear-gradient(-90deg, #2b2b2d 36%, #202d5e 90%);
+  padding: 15px;
+  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 2rem;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.452);
+  animation: hiAnimation 1 1s ease-in; }
+@keyframes hiAnimation {
+  0% {
+    transform: translateX(-250px); }
+  100% {
+    transform: translateX(0px); } }
   @media screen and (max-width: 600px) {
     .hi-container {
       position: absolute;
       left: 50px;
       top: 160px; } }
+  .hi-container .container-img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow-y: hidden; }
+    @media screen and (max-width: 600px) {
+      .hi-container .container-img {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center; } }
+    .hi-container .container-img .img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: black;
+      background: url(../Imagenes/foto.jpg);
+      background-position-y: top;
+      background-size: cover;
+      transition: all .5s; }
+      @media screen and (max-width: 600px) {
+        .hi-container .container-img .img {
+          width: 100px;
+          height: 100px; } }
+      .hi-container .container-img .img:hover {
+        background: url(../Imagenes/foto2.PNG);
+        background-position-y: top;
+        background-position-x: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: all .5s; }
   .hi-container h3 {
-    font-size: 3rem;
-    transition: .6s; }
+    font-size: 2.5rem;
+    transition: .6s;
+    color: white; }
     @media screen and (max-width: 600px) {
       .hi-container h3 {
         font-size: 2rem; } }
@@ -142,56 +211,19 @@ nav {
       .hi-container span {
         font-size: 1.8rem; } }
 
-.container-img {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  overflow-y: hidden;
-  top: 15vh;
-  left: 15vh; }
-  @media screen and (max-width: 600px) {
-    .container-img {
-      position: absolute;
-      left: 20px;
-      top: 20px;
-      width: 150px;
-      height: 150px;
-      display: flex;
-      justify-content: center;
-      align-items: center; } }
-  .container-img .img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: black;
-    background: url(../Imagenes/foto.jpg);
-    background-position-y: top;
-    background-size: cover;
-    transition: all .5s; }
-    @media screen and (max-width: 600px) {
-      .container-img .img {
-        width: 100px;
-        height: 100px; } }
-    .container-img .img:hover {
-      background: url(../Imagenes/foto2.PNG);
-      background-position-y: top;
-      background-position-x: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      transition: all .5s; }
-
 /* -----------CAROUSEL -------- */
 .carousel {
-  width: 70%;
-  left: 30%;
-  top: 15vh;
+  width: 90%;
+  left: 10%;
+  top: 0px;
   position: relative;
   overflow-y: scroll;
   overflow-x: hidden;
   height: 95vh;
   cursor: pointer;
   scroll-snap-type: y mandatory;
-  scroll-behavior: auto; }
+  scroll-behavior: auto;
+  padding-top: 20px; }
   @media screen and (max-width: 600px) {
     .carousel {
       top: 15vh;
@@ -409,16 +441,7 @@ nav {
       .container-projects .projects a:hover {
         background: #2b2b2d;
         background: linear-gradient(90deg, #2b2b2d 36%, #202d5e 90%);
-        color: white;
-        /*  ::after{
-             position: absolute;
-             left: 0px;
-             top: 100px;
-             width: 200px;
-             height: 200px;
-             background-color: red;
-             content: ' ';
-         } */ }
+        color: white; }
 
 .projects,
 .about,
@@ -432,12 +455,13 @@ nav {
   font-size: 3.5rem;
   color: #969696;
   position: relative;
-  background-color: #d8d7d7;
+  background-color: #9b9a9a;
   box-shadow: inset 0px 0px 20px #eceaea;
   border-radius: 4rem;
   padding: 5px 20px;
   font-family: Lato, sans-serif;
   z-index: 99;
+  color: white;
   text-align: center; }
   @media screen and (max-width: 600px) {
     .container-tech h1,
@@ -503,15 +527,13 @@ nav {
         font-size: 2rem;
         display: block;
         position: relative;
-                   /* 
-border: 1px solid black; */
         padding-left: 5px;
         width: 200px;
         display: flex;
         justify-content: center;
         background-color: black;
         border-radius: 1rem;
-        background-color: #d8d7d7;
+        background-color: #9b9a9a;
         color: black;
         font-family: Lato, sans-serif;
         color: white; }
