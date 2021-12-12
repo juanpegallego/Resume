@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 
-* {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -17,7 +17,8 @@ $small : 600px;
 
 body{
     overflow: hidden;
-    background-color: rgb(36, 35, 35);
+    background-color: rgb(56, 54, 54); 
+    
     @media screen and (max-width: $small) {
        display: flex;
        flex-direction: column;
@@ -29,12 +30,13 @@ body{
 /* ------------- NAV ---------------*/
 .active{
     background-color: transparent;
+    
 }
 nav {
-    top: 0px;
+    
     position: relative;
     width: 100%;
-    height: 50px;
+    min-height: 40px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;    
@@ -47,83 +49,37 @@ nav {
             transform: translateY(0px);
         }
     }
-       
-    
-    .data-container{
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        align-items: center;
-        position: relative;
-        min-width: 180px;
-        left: 300px;
-        margin-left: 100px;            
-        background-color: rgb(121, 117, 117);
-        border-radius: 3rem;
+    ::before{
+        position: absolute;
+        left: 0vw;
+        content:'';
+        width: 150%;
+        min-height: 40px;
+        z-index: -1;
+        background-image: linear-gradient(to right, #0d1329, #151e41, rgb(19, 32, 78),#314796,#2c4292);  
+        border-bottom-left-radius: 5rem;
         @media screen and (max-width: $small) {
-           position: absolute;
-           left:15%;
-        }    
-        a{
-            color: transparent;
+            display: none;
         }
-        img{
-            margin: 0px 10px;
-            width: 30px; 
-            height: 30px;
-            @media screen and (max-width: $small) {
-               width: 25px;
-               height: 25px;
-            }
-            &:hover{            
-                animation-name: girarContacto;
-                animation-iteration-count: infinite;
-                animation-fill-mode: forwards;
-                animation-duration: 10s;
-                
-            }
-            &:hover #mail{
-                width: 25px;
-                height: 25px;                
-            }           
+    } 
     
-        }
-        #mail{
-            width: 32px;
-            height: 40px;
-            @media screen and (max-width: $small) {
-                width: 35px;
-                height:30px;
-             }
-        }
-    }
+    
     ul {
-        width: 40%;
-        left: 10%;
+        width: 35%;
+        height: 40px;
+        margin-left: auto;
         display: flex;
-        justify-content: space-evenly;
+        top: 0px;
+        justify-content: center;
         position: relative;
-        list-style: none;
-        background-color: transparent;
-        height: 100%;
+        list-style: none;   
         align-items: center;
         
-        ::before{
-            position: absolute;
-            left: -50%;
-            top: 0;
-            content:'';
-            width: 200%;
-            height: 100%;
-            z-index: -1;
-            background-image: linear-gradient(to right, #0d1329, #151e41, rgb(19, 32, 78),#314796,#2c4292); 
-            border-bottom-left-radius: 5rem;
-
-            @media screen and (max-width: $small) {
-                display: none;
-            }
-        } 
-
+        transition: all 1.5s;
+        &:hover{
+            width: 40%;
+            transition: all .5s;
+        }
         @media screen and (max-width: $small) {
             text-align: right;
             flex-direction: column;
@@ -139,7 +95,7 @@ nav {
             @media screen and (max-width: $small) {
                 margin-top: 10px;
             }
-
+            margin: auto 20px;
             a{
                 font-size: 2rem;
                 font-weight: bold;
@@ -164,20 +120,31 @@ nav {
 
 
 .language{
-    color:rgb(26, 26, 83); 
     text-decoration: underline 1px;
-    
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50px;
+    left: 5px;
+    top: 5px;
+    position: absolute;
+    background-color: transparent;
+    border-radius: 5%;
     @media screen and (max-width: $small) {
         position: absolute;
         top: 0px;
         left: 20px;
     }
+    &:hover{
+        background-color: rgba(255, 255, 255, 0.075);
+    }
     a{
         img{
-            width: 40px;
-            &:hover{
-                filter: contrast(70%);
-            }
+            margin: 10px;
+            width: 45px;
+            z-index: 1;
+            
         }
     }
 }
@@ -186,7 +153,17 @@ nav {
 
 /*-----------link redes-------------------*/
 
-
+.bgc__video{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -2;
+    filter: contrast(100%) grayscale(50%) blur(2px);
+    height: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 
 @keyframes girarContacto{
@@ -261,7 +238,7 @@ nav {
 
 
     h3 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         transition: .6s;
         color: white;
         @media screen and (max-width: $small) {
@@ -269,7 +246,7 @@ nav {
         }
     }
     span {
-        font-size: 2rem;
+        font-size: 1.8rem;
         color: rgb(150, 150, 150);
         transition: .6s;
         @media screen and (max-width: $small) {
@@ -277,7 +254,54 @@ nav {
          }
     }
 
+    .data-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        min-width: 150px;
+        position: relative;
+        margin-top: 5px;
+        margin-right: auto;            
+        background-color: rgba(194, 187, 187, 0.204);
+        border-radius: .5rem;
+           
+        a{
+            color: transparent;
+        }
+        img{
+            margin: 0px 10px;
+            width: 30px; 
+            height: 30px;
+            
+            @media screen and (max-width: $small) {
+               width: 25px;
+               height: 25px;
+            }
+            &:hover{            
+                animation-name: girarContacto;
+                animation-iteration-count: infinite;
+                animation-fill-mode: forwards;
+                animation-duration: 10s;
+                
+            }
+            &:hover #mail{
+                width: 25px;
+                height: 25px;                
+            }           
     
+        }
+        #mail{
+            width: 32px;
+            height: 40px;
+            z-index: 2;
+            @media screen and (max-width: $small) {
+                width: 35px;
+                height:30px;
+             }
+        }
+    }
 
 }
 
@@ -289,8 +313,8 @@ nav {
 /* -----------CAROUSEL -------- */
 .carousel {
     width: 90%;
-    left: 10%;
-    top: 0px;
+    left: 15%;
+    top: 20px;
     position: relative;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -344,6 +368,7 @@ nav {
     flex-direction: column;
     flex-wrap: wrap;
     scroll-snap-align: start;
+    
     h1{
         font-size: 5rem;
         position: relative;
@@ -395,11 +420,11 @@ nav {
         text-decoration: none;
         position:relative;
         color: $Principal;
-        width: 25%;
+        min-width: 200px;
         display: flex;
         justify-content: space-evenly;
         align-items: center;        
-        padding: 5px;
+        padding: 5px 9px;
         left: 0px;
         margin: 100px auto;
         border: 1px solid $Principal;
@@ -410,6 +435,9 @@ nav {
             background: rgb(43,43,45);
             background: linear-gradient(90deg, rgba(43,43,45,1) 36%, rgb(32, 45, 94) 90%);
             color: white;
+            transition: all 1s;
+            border: none;
+            box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.095);
         }
     }
     
@@ -694,7 +722,10 @@ nav {
     flex-direction: column;
     top:30px;
     position: relative;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
+    h1{
+        margin: 20px;
+    }
     .form {
         top: 20px;
         position: relative;
@@ -703,11 +734,9 @@ nav {
         align-items: center;
         flex-direction: column;
         width: 100%;
-        left: 0px;
-        
         padding-bottom: 120px;
         input {
-            width: 60%;
+            width: 40%;
             height: 30px;
             font-size: 2rem;
             margin: 10px 0px;
@@ -730,7 +759,7 @@ nav {
             }
         }
         .left_container{
-            width: 60%;
+            width: 40%;
             display: flex;
             justify-content: space-evenly;
             align-items: left;
@@ -742,11 +771,10 @@ nav {
                 font-size: 2rem;
                 display: block;
                 position: relative; 
-                padding-left: 5px;
-                width: 200px;
+                padding:5px 10px;
                 display: flex;
+                width: 50%;
                 justify-content: center;
-                background-color: black;
                 border-radius: 1rem;
                 background-color: rgb(155, 154, 154);
                 color: black;
@@ -763,6 +791,7 @@ nav {
                 height: 30px;
                 color: white;
                 border: none;
+                padding-left: 10px;
                 background-color: rgb(49, 49, 49);
                 @media screen and (max-width: $small) {
                     font-size: 1.5rem;
@@ -770,7 +799,7 @@ nav {
                 &::placeholder{
                     color: black;
                     font-size: 2rem;
-                    padding-left: 5px;
+                    
                 }
                 option{
                     font-size: 1.8rem;
@@ -782,7 +811,7 @@ nav {
             margin-top: 20px;
             font-size: 2rem;
             position: relative;
-            width: 60%;
+            width: 40%;
             padding: 4px 10px;
             resize: none;
             background-color: rgb(49, 49, 49);
