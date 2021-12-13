@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@300;400;500&display=swap');
 
 *{
     padding: 0;
@@ -41,6 +41,7 @@ nav {
     justify-content: space-evenly;
     align-items: center;    
     animation: navAnimation 1 .5s ease-in-out;
+    
     @keyframes navAnimation {
         0%{
             transform: translateY(-50px);
@@ -49,19 +50,7 @@ nav {
             transform: translateY(0px);
         }
     }
-    ::before{
-        position: absolute;
-        left: 0vw;
-        content:'';
-        width: 150%;
-        min-height: 40px;
-        z-index: -1;
-        background-image: linear-gradient(to right, #0d1329, #151e41, rgb(19, 32, 78),#314796,#2c4292);  
-        border-bottom-left-radius: 5rem;
-        @media screen and (max-width: $small) {
-            display: none;
-        }
-    } 
+   
     
     
     ul {
@@ -74,7 +63,8 @@ nav {
         position: relative;
         list-style: none;   
         align-items: center;
-        
+        background-image: linear-gradient(to right, #0d1329, #151e41, rgb(19, 32, 78),#314796,#2c4292);  
+        border-bottom-left-radius: 2rem;
         transition: all 1.5s;
         &:hover{
             width: 40%;
@@ -83,7 +73,8 @@ nav {
         @media screen and (max-width: $small) {
             text-align: right;
             flex-direction: column;
-            top: 40px;
+            border-bottom-left-radius: unset;
+            top: 0px;
             width: 100%;
             padding-bottom: 10px;
             left: 0%;
@@ -135,6 +126,7 @@ nav {
         position: absolute;
         top: 0px;
         left: 20px;
+        z-index: 9;
     }
     &:hover{
         background-color: rgba(255, 255, 255, 0.075);
@@ -144,7 +136,9 @@ nav {
             margin: 10px;
             width: 45px;
             z-index: 1;
-            
+            @media screen and (max-width: $small) {
+                width: 30px;
+            }
         }
     }
 }
@@ -158,7 +152,7 @@ nav {
     left: 0px;
     top: 0px;
     z-index: -2;
-    filter: contrast(100%) grayscale(50%) blur(2px);
+    filter:  brightness(50%) contrast(70%);
     height: 0px;
     width: 100%;
     height: 100%;
@@ -181,7 +175,7 @@ nav {
     flex-direction: column;
     left: 0px;
     top: 25%;
-    min-height: 50vh;
+    min-height: 50vh;   
     transition: .6s;
     background: rgb(43,43,45);
     background: linear-gradient(-90deg, rgba(43,43,45,1) 36%, rgb(32, 45, 94) 90%);
@@ -201,7 +195,17 @@ nav {
     }
 
     @media screen and (max-width: $small) {
-        display: none;
+        display: flex;        
+        position: relative;
+        top: 80px;
+        left: 0px;
+        padding: unset;
+        width: 100%;
+        min-height: 100px;
+        background: unset;
+        box-shadow: unset;     
+        border-bottom-right-radius: unset;
+        border-top-right-radius: unset;
     }
 
     .container-img{
@@ -209,7 +213,9 @@ nav {
         height: 100px;
         position: relative;
         overflow-y: hidden;
-      
+        @media screen and (max-width: $small) {
+            display: flex;
+          }
         .img{
             width: 100%;
             height: 100%;
@@ -220,8 +226,11 @@ nav {
             background-size: cover;
             transition: all .5s;
             @media screen and (max-width: $small) {
-               width: 100px;
-               height: 100px;
+              width: 80%;
+              height: 80%;
+              margin: auto;
+              background-position-y: unset;
+              position: relative;
             }
             &:hover{
                 background: url(../Imagenes/foto2.PNG);
@@ -242,15 +251,17 @@ nav {
         transition: .6s;
         color: white;
         @media screen and (max-width: $small) {
-            font-size: 2rem;
+            display: block;
+            margin-bottom: 10px;
         }
     }
     span {
         font-size: 1.8rem;
         color: rgb(150, 150, 150);
         transition: .6s;
+        text-align: center;
         @media screen and (max-width: $small) {
-            font-size: 1.8rem;
+            display: none;
          }
     }
 
@@ -264,9 +275,13 @@ nav {
         position: relative;
         margin-top: 5px;
         margin-right: auto;            
-        background-color: rgba(194, 187, 187, 0.204);
+        background-color: rgba(255, 255, 255, 0.521);
         border-radius: .5rem;
-           
+        @media screen and (max-width: $small) {
+            flex-direction: row;
+            min-width: 50px;
+            margin: auto;
+         }
         a{
             color: transparent;
         }
@@ -278,6 +293,7 @@ nav {
             @media screen and (max-width: $small) {
                width: 25px;
                height: 25px;
+               margin-top: 10px;
             }
             &:hover{            
                 animation-name: girarContacto;
@@ -293,12 +309,12 @@ nav {
     
         }
         #mail{
-            width: 32px;
-            height: 40px;
+            width: 31px;
+            height: 38px;
             z-index: 2;
             @media screen and (max-width: $small) {
-                width: 35px;
-                height:30px;
+                width: 25px;
+                height:25px;
              }
         }
     }
@@ -319,14 +335,14 @@ nav {
     overflow-y: scroll;
     overflow-x: hidden;
     height: 95vh;
-    cursor: pointer;
     scroll-snap-type: y mandatory;
     scroll-behavior: auto;
     padding-top: 20px;
     @media screen and (max-width: $small) {
+             
         top: 15vh;
         left: 0px;
-        width: 95%;
+        width: 100%;
         margin: auto;
      }
 }
@@ -367,13 +383,15 @@ nav {
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
+    @media screen and (max-width: $small) {
+        scroll-snap-align: unset;
+     }
     
     h1{
         font-size: 5rem;
         position: relative;
         z-index: -1;
-        text-align: left;
     }
     p{
         font-size: 1.8rem;
@@ -385,61 +403,59 @@ nav {
 /*----------------POSICION CONTAINERS---------------------*/
 
 .container-about{
-    top: 0px;
     min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: $small) {
+        min-height: 20vh;
+     }
     .about{
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         flex-direction: column;
-        height: 90%;
         color: white;
-        h1{
-            position: relative;
-        }
+        @media screen and (max-width: $small) {
+            justify-content:center;
+            
+         }
        p{
            width: 70%;
-           transform: translateY(50px);
-           position: relative;
-           line-height: 25px;
+           margin-top: 50px;
            @media screen and (max-width: $small) {
             width: 90%;
          }
        }
         a{
-            position: relative;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: white;
+            min-width: 200px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;        
+            padding: 5px 9px;
+            margin: 100px auto;
+            background: rgb(43,43,45);
+            background: linear-gradient(90deg, rgba(43,43,45,1) 36%, rgb(32, 45, 94) 90%);
+            
+            box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.195);
+            
             @media screen and (max-width: $small) {
-                width: 200px;
+                margin: 20px auto;
              }
+        ion-icon{
+            font-size: 2.5rem;
+            margin-right: 5px;
+        }
+        &:hover{
+            border: 2px solid white;
+        }
         }
     }
    
 
-    .download{
-        font-size: 1.5rem;
-        text-decoration: none;
-        position:relative;
-        color: $Principal;
-        min-width: 200px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;        
-        padding: 5px 9px;
-        left: 0px;
-        margin: 100px auto;
-        border: 1px solid $Principal;
-        ion-icon{
-            font-size: 2.5rem;
-        }
-        &:hover{
-            background: rgb(43,43,45);
-            background: linear-gradient(90deg, rgba(43,43,45,1) 36%, rgb(32, 45, 94) 90%);
-            color: white;
-            transition: all 1s;
-            border: none;
-            box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.095);
-        }
-    }
     
 }
 
@@ -452,6 +468,10 @@ nav {
     align-items: center;
     top: 0px;
     height: 80vh;
+    @media screen and (max-width: $small) {
+        height: unset;
+        min-height: 40vh;
+     }
         .container-bars{
             position: relative;
             width: 100%;
@@ -551,7 +571,7 @@ nav {
 
 .container-projects {
     min-height: 100vh;
-    
+   
     .projects{
         display: flex;
         justify-content: space-evenly;
@@ -575,94 +595,67 @@ nav {
             
             @media screen and (max-width: $small) {        
                 width: 100%;
-                margin-top: 100px;
                 top: 0px;
             }
         
             
         
             .card{    
-                display: flex;
-                position: relative;     
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                max-height: 30vh;
+                display: block;
                 width: 300px;
-                overflow: hidden;    
-                transition: all 1s;
-                
-                @media screen and (max-width: $small) {        
-                    width: 100%;
-                    max-width: initial;
-                    margin-top: 20px;
-                }
-                
-                &:hover .card-description{
+                margin-top: 20px;
+                a{
                     display: flex;
-                    position: absolute;
-                    color: white;
-                    z-index: 1;
-                    backdrop-filter: blur(2px) contrast(90%) brightness(70%);
-                }
-                .card-description{
-                    display: none;
                     flex-direction: column;
-                    justify-content: space-evenly;
-                    align-items: center;
-                    position: absolute;
-                    color: white;
-                    width: 300px;
-                    height: 180px;
-                    z-index: 2;
-                    overflow: hidden;
-                    text-align: center;
-                    h3{
-                        font-size: 2rem;
-                    }
-                    p{
-                        font-size: 1.5rem;
-                        width: 90%;
-                    }
-
-                    
-                }
-
-
-                
-                
-                .container-video-link{
-                    position: relative;
-                    width: 100%;
-                    display: flex;
-                    flex-direction: row;
                     justify-content: center;
                     align-items: center;
-                    @media screen and (max-width: $small) {        
+
+                    .card-description{
+                        display: none;
+                        
+                    }
+                    video{
+                        object-fit: cover;
                         width: 100%;
-                        height: initial;
+                    }
+                    &:hover .card-description{
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
                         flex-direction: column;
+                        position: absolute;
+                        z-index: 1;
+                        padding: 10px;
+                        color: white;
+
+                        text-align: center;
+                        h3{
+                            font-size: 2.5rem;
+                        }
+                        p{
+                            font-size: 1.8rem;
+                            font-style: italic;
+                        }
                     }
 
-                   
-                    .img-container{
-                        display: block;
-                        &:hover .card-video{
-                            filter: contrast(10%) blur(5px);
-                            transition: all 1s;
-                        }
+                    &:hover video{
+                        filter: contrast(40%) brightness(30%);
+                        transition: all .5s;
+                    }
+                }
+                
+                
+                
+               
+                
 
-                        .card-video{
-                            width: 300px; 
-                            object-fit: 100%;
-                            height: 250px;
-                            transition: .6s;   
-                            z-index: 0;
-                            border-radius: .5rem;
-                            filter: contrast(90%) blur(0px);                            
-                        }                         
-                    }                                    
-                }     
+
+                
+                
+                
+                     
+                                                       
+                  
             }           
         }       
     }   
@@ -682,14 +675,12 @@ nav {
 .container-projects h1,
 .container-contact h1,
 .container-about h1{
-            font-size: 3.5rem;
+            font-size: 4rem;
             color: $titulos;            
             position: relative;
-            background-color: rgb(155, 154, 154);
-            box-shadow: inset 0px 0px 20px rgb(236, 234, 234);
-            border-radius: 4rem;
+            border-radius: 2rem;
             padding: 5px 20px;            
-            font-family:Lato, sans-serif;
+            font-family:Monserrat, sans-serif;
             z-index: 99;
             color: white;
             text-align: center;
@@ -699,17 +690,7 @@ nav {
             
 }
 
-.container-tech ,
-.container-projects ,
-.container-contact ,
-.container-about {
-    
-    &:hover h1{
-        box-shadow: none;
-                transition: box-shadow .5s;
-                color: white;
-    }
-}
+
 
 
 /*----------------FORM---------------------*/
@@ -722,19 +703,23 @@ nav {
     flex-direction: column;
     top:30px;
     position: relative;
-    padding-bottom: 150px;
+    @media screen and (max-width: $small) {
+        min-height: 150vh;
+        top: -200px;
+    }
     h1{
         margin: 20px;
     }
     .form {
-        top: 20px;
+        top: 0px;
         position: relative;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         flex-direction: column;
         width: 100%;
-        padding-bottom: 120px;
+        padding-bottom: 50px;
+       
         input {
             width: 40%;
             height: 30px;
@@ -817,6 +802,10 @@ nav {
             background-color: rgb(49, 49, 49);
             border: none;
             color: white;
+
+            @media screen and (max-width: $small) {
+                width: 90%;
+             }
             &:focus{
                 border: none;
                 outline: none;
@@ -839,6 +828,9 @@ nav {
             background: rgb(43,43,45);
             background: linear-gradient(90deg, rgba(43,43,45,1) 36%, rgb(32, 45, 94) 90%);
             border: none;
+            @media screen and (max-width: $small) {
+                width: 50%;
+             }
             &:hover{            
                 border: 2px solid white;
             }

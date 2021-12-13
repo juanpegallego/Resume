@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@300;400;500&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -34,18 +35,6 @@ nav {
     transform: translateY(-50px); }
   100% {
     transform: translateY(0px); } }
-  nav ::before {
-    position: absolute;
-    left: 0vw;
-    content: '';
-    width: 150%;
-    min-height: 40px;
-    z-index: -1;
-    background-image: linear-gradient(to right, #0d1329, #151e41, #13204e, #314796, #2c4292);
-    border-bottom-left-radius: 5rem; }
-    @media screen and (max-width: 600px) {
-      nav ::before {
-        display: none; } }
   nav ul {
     width: 35%;
     height: 40px;
@@ -56,6 +45,8 @@ nav {
     position: relative;
     list-style: none;
     align-items: center;
+    background-image: linear-gradient(to right, #0d1329, #151e41, #13204e, #314796, #2c4292);
+    border-bottom-left-radius: 2rem;
     transition: all 1.5s; }
     nav ul:hover {
       width: 40%;
@@ -64,7 +55,8 @@ nav {
       nav ul {
         text-align: right;
         flex-direction: column;
-        top: 40px;
+        border-bottom-left-radius: unset;
+        top: 0px;
         width: 100%;
         padding-bottom: 10px;
         left: 0%;
@@ -107,13 +99,17 @@ nav {
     .language {
       position: absolute;
       top: 0px;
-      left: 20px; } }
+      left: 20px;
+      z-index: 9; } }
   .language:hover {
     background-color: rgba(255, 255, 255, 0.075); }
   .language a img {
     margin: 10px;
     width: 45px;
     z-index: 1; }
+    @media screen and (max-width: 600px) {
+      .language a img {
+        width: 30px; } }
 
 /*-----------link redes-------------------*/
 .bgc__video {
@@ -121,7 +117,7 @@ nav {
   left: 0px;
   top: 0px;
   z-index: -2;
-  filter: contrast(150%) grayscale(50%) blur(2px);
+  filter: brightness(50%) contrast(70%);
   height: 0px;
   width: 100%;
   height: 100%;
@@ -155,12 +151,25 @@ nav {
     transform: translateX(0px); } }
   @media screen and (max-width: 600px) {
     .hi-container {
-      display: none; } }
+      display: flex;
+      position: relative;
+      top: 80px;
+      left: 0px;
+      padding: unset;
+      width: 100%;
+      min-height: 100px;
+      background: unset;
+      box-shadow: unset;
+      border-bottom-right-radius: unset;
+      border-top-right-radius: unset; } }
   .hi-container .container-img {
     width: 100px;
     height: 100px;
     position: relative;
     overflow-y: hidden; }
+    @media screen and (max-width: 600px) {
+      .hi-container .container-img {
+        display: flex; } }
     .hi-container .container-img .img {
       width: 100%;
       height: 100%;
@@ -172,8 +181,11 @@ nav {
       transition: all .5s; }
       @media screen and (max-width: 600px) {
         .hi-container .container-img .img {
-          width: 100px;
-          height: 100px; } }
+          width: 80%;
+          height: 80%;
+          margin: auto;
+          background-position-y: unset;
+          position: relative; } }
       .hi-container .container-img .img:hover {
         background: url(../Imagenes/foto2.PNG);
         background-position-y: top;
@@ -187,14 +199,16 @@ nav {
     color: white; }
     @media screen and (max-width: 600px) {
       .hi-container h3 {
-        font-size: 2rem; } }
+        display: block;
+        margin-bottom: 10px; } }
   .hi-container span {
     font-size: 1.8rem;
     color: #969696;
-    transition: .6s; }
+    transition: .6s;
+    text-align: center; }
     @media screen and (max-width: 600px) {
       .hi-container span {
-        font-size: 1.8rem; } }
+        display: none; } }
   .hi-container .data-container {
     display: flex;
     justify-content: center;
@@ -205,8 +219,13 @@ nav {
     position: relative;
     margin-top: 5px;
     margin-right: auto;
-    background-color: rgba(194, 187, 187, 0.204);
+    background-color: rgba(255, 255, 255, 0.521);
     border-radius: .5rem; }
+    @media screen and (max-width: 600px) {
+      .hi-container .data-container {
+        flex-direction: row;
+        min-width: 50px;
+        margin: auto; } }
     .hi-container .data-container a {
       color: transparent; }
     .hi-container .data-container img {
@@ -216,7 +235,8 @@ nav {
       @media screen and (max-width: 600px) {
         .hi-container .data-container img {
           width: 25px;
-          height: 25px; } }
+          height: 25px;
+          margin-top: 10px; } }
       .hi-container .data-container img:hover {
         animation-name: girarContacto;
         animation-iteration-count: infinite;
@@ -226,13 +246,13 @@ nav {
         width: 25px;
         height: 25px; }
     .hi-container .data-container #mail {
-      width: 32px;
-      height: 40px;
+      width: 31px;
+      height: 38px;
       z-index: 2; }
       @media screen and (max-width: 600px) {
         .hi-container .data-container #mail {
-          width: 35px;
-          height: 30px; } }
+          width: 25px;
+          height: 25px; } }
 
 /* -----------CAROUSEL -------- */
 .carousel {
@@ -243,7 +263,6 @@ nav {
   overflow-y: scroll;
   overflow-x: hidden;
   height: 95vh;
-  cursor: pointer;
   scroll-snap-type: y mandatory;
   scroll-behavior: auto;
   padding-top: 20px; }
@@ -251,7 +270,7 @@ nav {
     .carousel {
       top: 15vh;
       left: 0px;
-      width: 95%;
+      width: 100%;
       margin: auto; } }
 
 /* ===== Scrollbar CSS ===== */
@@ -284,15 +303,20 @@ nav {
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  scroll-snap-align: start; }
+  scroll-snap-align: center; }
+  @media screen and (max-width: 600px) {
+    .container-about,
+    .container-projects,
+    .container-tech,
+    .container-contact {
+      scroll-snap-align: unset; } }
   .container-about h1,
   .container-projects h1,
   .container-tech h1,
   .container-contact h1 {
     font-size: 5rem;
     position: relative;
-    z-index: -1;
-    text-align: left; }
+    z-index: -1; }
   .container-about p,
   .container-projects p,
   .container-tech p,
@@ -301,52 +325,49 @@ nav {
 
 /*----------------POSICION CONTAINERS---------------------*/
 .container-about {
-  top: 0px;
-  min-height: 50vh; }
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  @media screen and (max-width: 600px) {
+    .container-about {
+      min-height: 20vh; } }
   .container-about .about {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    height: 90%;
     color: white; }
-    .container-about .about h1 {
-      position: relative; }
+    @media screen and (max-width: 600px) {
+      .container-about .about {
+        justify-content: center; } }
     .container-about .about p {
       width: 70%;
-      transform: translateY(50px);
-      position: relative;
-      line-height: 25px; }
+      margin-top: 50px; }
       @media screen and (max-width: 600px) {
         .container-about .about p {
           width: 90%; } }
     .container-about .about a {
-      position: relative; }
-      @media screen and (max-width: 600px) {
-        .container-about .about a {
-          width: 200px; } }
-  .container-about .download {
-    font-size: 1.5rem;
-    text-decoration: none;
-    position: relative;
-    color: #3e5bc1;
-    min-width: 200px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 5px 9px;
-    left: 0px;
-    margin: 100px auto;
-    border: 1px solid #3e5bc1; }
-    .container-about .download ion-icon {
-      font-size: 2.5rem; }
-    .container-about .download:hover {
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: white;
+      min-width: 200px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 5px 9px;
+      margin: 100px auto;
       background: #2b2b2d;
       background: linear-gradient(90deg, #2b2b2d 36%, #202d5e 90%);
-      color: white;
-      transition: all 1s;
-      border: none;
-      box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.095); }
+      box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.195); }
+      @media screen and (max-width: 600px) {
+        .container-about .about a {
+          margin: 20px auto; } }
+      .container-about .about a ion-icon {
+        font-size: 2.5rem;
+        margin-right: 5px; }
+      .container-about .about a:hover {
+        border: 2px solid white; }
 
 .container-tech {
   display: flex;
@@ -355,6 +376,10 @@ nav {
   align-items: center;
   top: 0px;
   height: 80vh; }
+  @media screen and (max-width: 600px) {
+    .container-tech {
+      height: unset;
+      min-height: 40vh; } }
   .container-tech .container-bars {
     position: relative;
     width: 100%;
@@ -451,71 +476,39 @@ nav {
       @media screen and (max-width: 600px) {
         .container-projects .projects .main-container {
           width: 100%;
-          margin-top: 100px;
           top: 0px; } }
       .container-projects .projects .main-container .card {
-        display: flex;
-        position: relative;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        max-height: 30vh;
+        display: block;
         width: 300px;
-        overflow: hidden;
-        transition: all 1s; }
-        @media screen and (max-width: 600px) {
-          .container-projects .projects .main-container .card {
-            width: 100%;
-            max-width: initial;
-            margin-top: 20px; } }
-        .container-projects .projects .main-container .card:hover .card-description {
+        margin-top: 20px; }
+        .container-projects .projects .main-container .card a {
           display: flex;
-          position: absolute;
-          color: white;
-          z-index: 1;
-          backdrop-filter: blur(2px) contrast(90%) brightness(70%); }
-        .container-projects .projects .main-container .card .card-description {
-          display: none;
           flex-direction: column;
-          justify-content: space-evenly;
-          align-items: center;
-          position: absolute;
-          color: white;
-          width: 300px;
-          height: 180px;
-          z-index: 2;
-          overflow: hidden;
-          text-align: center; }
-          .container-projects .projects .main-container .card .card-description h3 {
-            font-size: 2rem; }
-          .container-projects .projects .main-container .card .card-description p {
-            font-size: 1.5rem;
-            width: 90%; }
-        .container-projects .projects .main-container .card .container-video-link {
-          position: relative;
-          width: 100%;
-          display: flex;
-          flex-direction: row;
           justify-content: center;
           align-items: center; }
-          @media screen and (max-width: 600px) {
-            .container-projects .projects .main-container .card .container-video-link {
-              width: 100%;
-              height: initial;
-              flex-direction: column; } }
-          .container-projects .projects .main-container .card .container-video-link .img-container {
-            display: block; }
-            .container-projects .projects .main-container .card .container-video-link .img-container:hover .card-video {
-              filter: contrast(10%) blur(5px);
-              transition: all 1s; }
-            .container-projects .projects .main-container .card .container-video-link .img-container .card-video {
-              width: 300px;
-              object-fit: 100%;
-              height: 250px;
-              transition: .6s;
-              z-index: 0;
-              border-radius: .5rem;
-              filter: contrast(90%) blur(0px); }
+          .container-projects .projects .main-container .card a .card-description {
+            display: none; }
+          .container-projects .projects .main-container .card a video {
+            object-fit: cover;
+            width: 100%; }
+          .container-projects .projects .main-container .card a:hover .card-description {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            z-index: 1;
+            padding: 10px;
+            color: white;
+            text-align: center; }
+            .container-projects .projects .main-container .card a:hover .card-description h3 {
+              font-size: 2.5rem; }
+            .container-projects .projects .main-container .card a:hover .card-description p {
+              font-size: 1.8rem;
+              font-style: italic; }
+          .container-projects .projects .main-container .card a:hover video {
+            filter: contrast(40%) brightness(30%);
+            transition: all .5s; }
 
 .projects,
 .about,
@@ -526,14 +519,12 @@ nav {
 .container-projects h1,
 .container-contact h1,
 .container-about h1 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   color: #969696;
   position: relative;
-  background-color: #9b9a9a;
-  box-shadow: inset 0px 0px 20px #eceaea;
-  border-radius: 4rem;
+  border-radius: 2rem;
   padding: 5px 20px;
-  font-family: Lato, sans-serif;
+  font-family: Monserrat, sans-serif;
   z-index: 99;
   color: white;
   text-align: center; }
@@ -544,14 +535,6 @@ nav {
     .container-about h1 {
       font-size: 2.5rem; } }
 
-.container-tech:hover h1,
-.container-projects:hover h1,
-.container-contact:hover h1,
-.container-about:hover h1 {
-  box-shadow: none;
-  transition: box-shadow .5s;
-  color: white; }
-
 /*----------------FORM---------------------*/
 .contact {
   display: flex;
@@ -559,19 +542,22 @@ nav {
   align-items: center;
   flex-direction: column;
   top: 30px;
-  position: relative;
-  padding-bottom: 150px; }
+  position: relative; }
+  @media screen and (max-width: 600px) {
+    .contact {
+      min-height: 150vh;
+      top: -200px; } }
   .contact h1 {
     margin: 20px; }
   .contact .form {
-    top: 20px;
+    top: 0px;
     position: relative;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    padding-bottom: 120px; }
+    padding-bottom: 50px; }
     .contact .form input {
       width: 40%;
       height: 30px;
@@ -643,6 +629,9 @@ nav {
       background-color: #313131;
       border: none;
       color: white; }
+      @media screen and (max-width: 600px) {
+        .contact .form textarea {
+          width: 90%; } }
       .contact .form textarea:focus {
         border: none;
         outline: none; }
@@ -662,6 +651,9 @@ nav {
       background: #2b2b2d;
       background: linear-gradient(90deg, #2b2b2d 36%, #202d5e 90%);
       border: none; }
+      @media screen and (max-width: 600px) {
+        .contact .form button {
+          width: 50%; } }
       .contact .form button:hover {
         border: 2px solid white; }
 
