@@ -5,19 +5,29 @@
     <title>Juan Gallego - Desarrollador </title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="./css/styles.css">   
+    <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4EQTTJXWN3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-4EQTTJXWN3');
+    </script>
 </head>
 
 <body>
     <nav class="active">
-        
+
         <ul>
             <li>
                 <a href="#about">Acerca de mi</a>
@@ -28,16 +38,16 @@
             <li>
                 <a href="#contact">Contacto</a>
             </li>
-            
+
         </ul>
 
-        
+
     </nav>
     <video src="./Imagenes/Videos/bgcvideo.mp4" muted autoplay loop class="bgc__video"></video>
     <div class="language">
         <a href="index.html">
-            <img src="./Imagenes/png/usa.png" alt="usa-flag" >
-            
+            <img src="./Imagenes/png/usa.png" alt="usa-flag">
+
         </a>
     </div>
     <div class="hi-container">
@@ -53,7 +63,7 @@
             <a href="https://github.com/juanpegallego" target="_blank">
                 <img src="./Imagenes/png/github.png" alt="github" id="github">
             </a>
-    
+
             <a href="https://www.linkedin.com/in/jpgallego/" target="_blank">
                 <img src="./Imagenes/png/linkedin.png" alt="lkdn" id="lkdn">
             </a>
@@ -63,9 +73,9 @@
         </div>
     </div>
 
-  
 
-   
+
+
 
     <div class="carousel active ">
         <div class="container-about" id="about">
@@ -74,7 +84,7 @@
                     Acerca de mi
                 </h1>
                 <p>
-                    Soy  desarrollador web, actualmente vivo en Buenos Aires, Argentina. <br> Me apasiona el diseño de
+                    Soy desarrollador web, actualmente vivo en Buenos Aires, Argentina. <br> Me apasiona el diseño de
                     páginas web principalmente usando React y SASS entre otras tecnologias. <br>
                     Debajo podras descargar mi curriculum completo en formato pdf.
 
@@ -126,145 +136,139 @@
         </div>
         <div class="container-projects" id="projects">
 
-            
-                <div class="projects">
-                    <h1>
-                        Proyectos
-                    </h1>
-                    <div class="main-container">
 
-                        <div class="card">
-                            <a href="https://petinder-190ad.web.app/" target="_blank">
-                                <div class="card-description">
-                                    <h3>
-                                        Tinder App Clon
-                                    </h3>
-                                    <p>
-                                        React JS, Material UI, Firebase.
-                                    </p>
-                                </div>
-                                <video src="./Imagenes/Videos/petinder.mp4" autoplay muted loop class="card-video"></video>
-                            </a>
-                        </div>
-    
-    
-                        <div class="card">
-                            <a href="https://post-app-practise-react.herokuapp.com/" target="_blank">
-                                <div class="card-description">
-                                    <h3>
-                                        Posts Crud App
-                                    </h3>
-                                    <p>
-                                        React JS, Hooks, Redux, SASS, Web API.
-                                    </p>
-                                </div>
-    
-    
-                                <video src="./Imagenes/Videos/Posts App.mp4" autoplay muted loop class="card-video"></video>
-                            </a>
-    
-                        </div>
-    
-                        <div class="card">
-                            <a href="https://juanpegallego.github.io/TorneriaMercedes/" target="_blank">
-                                <div class="card-description">
-                                    <h3>
-                                        Landing Page (Proyecto Freelance)
-                                    </h3>
-                                    <p>
-                                        Figma, Vanilla Js, SASS, GSAP.
-                                    </p>
-                                </div>
-    
-                                <video src="./Imagenes/Videos/torneriaMercedes.mp4" autoplay muted loop
-                                    class="card-video"></video>
-                            </a>
-    
-                        </div>
-    
-    
-    
-    
-                        <div class="card">
-                            <a href="https://cavaliere.group/" target="_blank">
-                                <div class="card-description">
-                                    <h3>
-                                        Landing Page (Proyecto Freelance)
-                                    </h3>
-                                    <p>
-                                        Primer proyecto pago. Figma, Vanilla Js, SASS, GSAP.
-                                    </p>
-                                </div>
-    
-    
-                                <video src="./Imagenes/Videos/Cavaliere - Home - Google Chrome 2021-11-15 23-49-05.mp4"
-                                    autoplay muted loop class="card-video"></video>
-                            </a>
-    
-                        </div>
-    
-    
-                        <div class="card">
-                            <a href="https://juanpegallego.github.io/Bitcoin-Pesos/" target="_blank" class="img-container">
-                                <div class="card-description">
-                                    <h3>
-                                        Calculador de Bitcoins en pesos
-                                    </h3>
-                                    <p>
-                                        Vanilla JS, SASS, Web API.
-                                    </p>
-                                </div>
-    
-    
-                                <video src="./Imagenes/Videos/btcprice.mp4" autoplay muted loop class="card-video"></video>
-                            </a>
-    
-    
-    
-                        </div>
-    
-    
-    
-                        <div class="card">
-                            <a href="https://juanpegallego.github.io/Control-de-ventas/" target="_blank"
-                                class="img-container">
-                                <div class="card-description">
-                                    <h3>
-                                        Calculador de ventas
-                                    </h3>
-                                    <p>
-                                        Vanilla JS, Vanilla CSS.
-                                    </p>
-                                </div>
-    
-    
-                                <video src="./Imagenes/Videos/Sales Board 2.mp4" autoplay muted loop class="card-video">
-                                </video>
-                            </a>
-    
-                        </div>
+            <div class="projects">
+                <h1>
+                    Proyectos
+                </h1>
+                <div class="main-container">
+
+                    <div class="card">
+                        <a href="https://petinder-190ad.web.app/" target="_blank">
+                            <div class="card-description">
+                                <h3>
+                                    Tinder App Clon
+                                </h3>
+                                <p>
+                                    React JS, Material UI, Firebase.
+                                </p>
+                            </div>
+                            <video src="./Imagenes/Videos/petinder.mp4" autoplay muted loop class="card-video"></video>
+                        </a>
                     </div>
-    
+
+                    <div class="card">
+                        <a href="https://hidden-chamber-47224.herokuapp.com/" target="_blank" class="img-container">
+                            <div class="card-description">
+                                <h3>
+                                    Convertidor de Bitcoins a Pesos
+                                </h3>
+                                <p>
+                                    React JS, Material UI.
+                                </p>
+                            </div>
+
+
+                            <video src="./Imagenes/Videos/btcprice.mp4" autoplay muted loop class="card-video"></video>
+                        </a>
+
+
+
+                    </div>
+                    <div class="card">
+                        <a href="https://post-app-practise-react.herokuapp.com/" target="_blank">
+                            <div class="card-description">
+                                <h3>
+                                    Posts Crud App
+                                </h3>
+                                <p>
+                                    React JS, Hooks, Redux, SASS, Web API.
+                                </p>
+                            </div>
+
+
+                            <video src="./Imagenes/Videos/Posts App.mp4" autoplay muted loop class="card-video"></video>
+                        </a>
+
+                    </div>
+
+                    <div class="card">
+                        <a href="https://juanpegallego.github.io/TorneriaMercedes/" target="_blank">
+                            <div class="card-description">
+                                <h3>
+                                    Landing Page (Proyecto Freelance)
+                                </h3>
+                                <p>
+                                    Figma, Vanilla Js, SASS, GSAP.
+                                </p>
+                            </div>
+
+                            <video src="./Imagenes/Videos/torneriaMercedes.mp4" autoplay muted loop
+                                class="card-video"></video>
+                        </a>
+
+                    </div>
+
+
+
+
+                    <div class="card">
+                        <a href="https://cavaliere.group/" target="_blank">
+                            <div class="card-description">
+                                <h3>
+                                    Landing Page (Proyecto Freelance)
+                                </h3>
+                                <p>
+                                    Primer proyecto pago. Figma, Vanilla Js, SASS, GSAP.
+                                </p>
+                            </div>
+
+
+                            <video src="./Imagenes/Videos/Cavaliere - Home - Google Chrome 2021-11-15 23-49-05.mp4"
+                                autoplay muted loop class="card-video"></video>
+                        </a>
+
+                    </div>
+
+
+
+
+
+
+                    <div class="card">
+                        <a href="https://juanpegallego.github.io/Control-de-ventas/" target="_blank"
+                            class="img-container">
+                            <div class="card-description">
+                                <h3>
+                                    Calculador de ventas
+                                </h3>
+                                <p>
+                                    Vanilla JS, Vanilla CSS.
+                                </p>
+                            </div>
+
+
+                            <video src="./Imagenes/Videos/Sales Board 2.mp4" autoplay muted loop class="card-video">
+                            </video>
+                        </a>
+
+                    </div>
                 </div>
 
-            
+            </div>
+
+
 
         </div>
         <div class="container-contact" id="contact">
             <div class="contact">
                 <h1>Contacto</h1>
-                <form action="https://formsubmit.co/gallegojpe@gmail.com" 
-                    class="form" method="POST" target="_blank" >
+                <form action="https://formsubmit.co/gallegojpe@gmail.com" class="form" method="POST" target="_blank">
                     <input type="text" placeholder="Nombre" name="name" required>
                     <input type="email" placeholder="Email" name="email" required>
 
-                                       
-                    <textarea 
-                        name="message"  
-                        cols="30" 
-                        rows="4" 
-                        placeholder="Detalles e informacion aquí"
-                        required>
+
+                    <textarea name="message" cols="30" rows="4" placeholder="Detalles e informacion aquí" required>
                     </textarea>
                     <button>Enviar</button>
                 </form>
@@ -272,7 +276,7 @@
         </div>
     </div>
 
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
     <script src="main.js"></script>

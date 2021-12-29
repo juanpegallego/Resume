@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Juan Gallego -  Developer</title>
+    <title>Juan Gallego - Developer</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,6 +14,15 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4EQTTJXWN3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-4EQTTJXWN3');
+    </script>
 </head>
 
 <body>
@@ -152,6 +161,24 @@
                         </a>
                     </div>
 
+                    <div class="card">
+                        <a href="https://hidden-chamber-47224.herokuapp.com/" target="_blank" class="img-container">
+                            <div class="card-description">
+                                <h3>
+                                    Bitcoin to Pesos Calculator
+                                </h3>
+                                <p>
+                                    React JS, Material UI.
+                                </p>
+                            </div>
+
+
+                            <video src="./Imagenes/Videos/btcprice.mp4" autoplay muted loop class="card-video"></video>
+                        </a>
+
+
+
+                    </div>
 
                     <div class="card">
                         <a href="https://post-app-practise-react.herokuapp.com/" target="_blank">
@@ -209,24 +236,7 @@
                     </div>
 
 
-                    <div class="card">
-                        <a href="https://juanpegallego.github.io/Bitcoin-Pesos/" target="_blank" class="img-container">
-                            <div class="card-description">
-                                <h3>
-                                    Bitcoin to Pesos Calculator
-                                </h3>
-                                <p>
-                                    Vanilla JS, SASS, Web API.
-                                </p>
-                            </div>
 
-
-                            <video src="./Imagenes/Videos/btcprice.mp4" autoplay muted loop class="card-video"></video>
-                        </a>
-
-
-
-                    </div>
 
 
 
@@ -256,16 +266,11 @@
         <div class="container-contact" id="contact">
             <div class="contact">
                 <h1>Contact</h1>
-                <form action="https://formsubmit.co/gallegojpe@gmail.com"
-                    class="form" method="POST" target="_blank">
+                <form action="https://formsubmit.co/gallegojpe@gmail.com" class="form" method="POST" target="_blank">
                     <input type="text" placeholder="Name" name="name" required>
                     <input type="email" placeholder="Email" name="email" required>
 
-                    <textarea 
-                        name="message" 
-                        cols="30" 
-                        rows="4" 
-                        placeholder="More details and information here."
+                    <textarea name="message" cols="30" rows="4" placeholder="More details and information here."
                         required>
                     </textarea>
 
