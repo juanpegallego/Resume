@@ -22,67 +22,6 @@ body {
 .active {
   background-color: transparent; }
 
-nav {
-  position: relative;
-  width: 100%;
-  min-height: 40px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  animation: navAnimation 1 .5s ease-in-out; }
-@keyframes navAnimation {
-  0% {
-    transform: translateY(-50px); }
-  100% {
-    transform: translateY(0px); } }
-  nav ul {
-    width: 35%;
-    height: 40px;
-    margin-left: auto;
-    display: flex;
-    top: 0px;
-    justify-content: center;
-    position: relative;
-    list-style: none;
-    align-items: center;
-    background-image: linear-gradient(to right, #0d1329, #151e41, #13204e, #314796, #2c4292);
-    border-bottom-left-radius: 2rem;
-    transition: all 1.5s; }
-    nav ul:hover {
-      width: 40%;
-      transition: all .5s; }
-    @media screen and (max-width: 600px) {
-      nav ul {
-        text-align: right;
-        flex-direction: column;
-        border-bottom-left-radius: unset;
-        top: 0px;
-        width: 100%;
-        padding-bottom: 10px;
-        left: 0%;
-        z-index: 9;
-        position: absolute;
-        height: auto; } }
-    nav ul li {
-      margin: auto 20px; }
-      @media screen and (max-width: 600px) {
-        nav ul li {
-          margin-top: 10px; } }
-      nav ul li a {
-        font-size: 2rem;
-        font-weight: bold;
-        text-decoration: none;
-        color: white; }
-        @media screen and (max-width: 600px) {
-          nav ul li a {
-            font-size: 1.8rem; } }
-        nav ul li a:hover {
-          color: white;
-          transition: all .2s;
-          text-decoration: underline #3e5bc1; }
-        nav ul li a:visited {
-          color: white; }
-
 .language {
   text-decoration: underline 1px;
   margin: auto;
@@ -109,7 +48,7 @@ nav {
     z-index: 1; }
     @media screen and (max-width: 600px) {
       .language a img {
-        width: 30px; } }
+        width: 40px; } }
 
 /*-----------link redes-------------------*/
 .bgc__video {
@@ -153,7 +92,7 @@ nav {
     .hi-container {
       display: flex;
       position: relative;
-      top: 80px;
+      top: 0px;
       left: 0px;
       padding: unset;
       width: 100%;
@@ -199,7 +138,7 @@ nav {
     color: white; }
     @media screen and (max-width: 600px) {
       .hi-container h3 {
-        display: block;
+        display: inline;
         margin-bottom: 10px; } }
   .hi-container span {
     font-size: 1.8rem;
@@ -268,7 +207,7 @@ nav {
   padding-top: 20px; }
   @media screen and (max-width: 600px) {
     .carousel {
-      top: 15vh;
+      top: 10px;
       left: 0px;
       width: 100%;
       margin: auto; } }
@@ -587,6 +526,8 @@ nav {
       background-color: #313131;
       border: none;
       color: white; }
+      .contact .form textarea::placeholder {
+        color: white; }
       @media screen and (max-width: 600px) {
         .contact .form textarea {
           width: 90%; } }

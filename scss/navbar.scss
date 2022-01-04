@@ -1,0 +1,197 @@
+
+
+//*------------------MEDIA --------------------------*//
+
+$smallest:375px;    
+$small: 600px;
+$medium: 900px;
+$big:1200px;
+$desktop:1824px;
+
+
+$Principal: #3e5bc1;
+$PrincipalClaro: rgb(120, 120, 216);
+$PrincipalOscuro: rgba(43,43,45,1);
+$PrincipalTrans: rgba(22, 22, 51, 0.438);
+$Secundario: rgb(150, 150, 150);
+$SecundarioClaro: rgb(190, 187, 187);
+$SecundarioOscuro: rgb(68, 67, 67);
+$SecundarioTrans: rgba(247, 183, 193, 0.466);
+
+$Secundario : rgb(150, 150, 150);
+$Principal :rgba(43,43,45,1);
+
+/*----------------- FONTS -------------------------*/
+
+$principal: 'Poppins', 'Sans Serif', 'Comic Sans';
+$secundaria: 'Montserrat', 'Sans Serif', 'Comic Sans';
+
+
+#hamburguer{
+  display: flex;    
+  border-radius: 5px;    
+  background-color: $PrincipalClaro;
+  font-size: 5rem;
+  position: absolute;
+  top: 0px;
+  color: white;
+  width: 10%;
+  min-width: 50px;
+  height: 50px;
+  right:  0px;
+  visibility: visible;
+  z-index: 999999;
+
+
+  @keyframes rotateHamburguer {
+    from{
+      transform: none;
+      border-radius: 50%; 
+    }
+    to{
+      transform: rotate(360deg);
+      border-radius: 5px; 
+    }
+  }
+
+  @media screen and (max-width: $big) {
+    top: 5px;
+    position: absolute;   
+    right:5px;
+    visibility: visible;
+    display: flex;
+ }   
+}
+nav
+{
+    width: 100vw;
+    height: 80px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    top: 0px;
+    background-color: transparent;
+    position: relative;
+    border-top : none;
+    @media screen and (max-width: $big) {
+       position: absolute;
+        width:100vw;
+        height: 225px;
+        left: initial;
+        transform: translateY(-500px);
+        top: 0px;
+        left: unset;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        transition: all .5s;
+      }
+       
+      
+      
+    
+
+    .navigation
+    {        
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 40%;
+        margin-left: auto;
+        flex-direction: row;
+        margin:10px 100px 20px auto;   
+
+        .nav__logo{
+          margin-right: auto;
+          position: relative;
+          display: flex;
+          left: -630px;
+          min-width: 250px;
+          justify-content: center;
+          align-items: center;
+          font-size: 13em;
+          strong{
+            margin-right: 7px;
+            font-size: 3rem;
+            color: $Secundario;
+          }
+        }
+
+        @media screen and (max-width: $big) {
+            width: 75%;
+            left: 0px;
+            margin: auto;
+            flex-direction: column;    
+            align-items: center; 
+            justify-content: space-evenly; 
+            align-items: center;  
+          }           
+               
+    }
+
+    .nav_wrapper
+    {
+        min-width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover .hide_lista{
+          display: block; 
+        }
+        
+        
+        @media screen and (max-width: $big) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+          min-height: 40px;
+          width: 100%;          
+          
+        }          
+
+       .nav_item{
+        width: 100%;
+        list-style: none;
+        
+        
+        &:hover a{          
+          font-weight: bolder;
+        }
+        .nav__last__item{
+          background-color: white;
+          color: $Secundario;
+          border-radius: 2rem;
+
+          &:hover{
+            background-color: $Secundario;
+            color: $Principal;
+          }
+        }
+        a
+        {
+            text-decoration: none;       
+            letter-spacing: -.5px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 40px;            
+            justify-content:space-evenly;        
+            color: white;                  
+            
+
+            span
+            {
+                font-size:1.75rem;
+                
+                @media screen and (max-width: $big) {
+                    font-size: 2.2rem;
+                    position: absolute;
+                  }             
+                  
+            
+      
+          }
+        }
+      }    
+  }
+}
