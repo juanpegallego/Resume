@@ -2,7 +2,7 @@
 #hamburguer {
   display: flex;
   border-radius: 5px;
-  background-color: #7878d8;
+  background-color: transparent;
   font-size: 5rem;
   position: absolute;
   top: 0px;
