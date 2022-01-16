@@ -309,6 +309,7 @@ body{
     align-items: center;
     @media screen and (max-width: $small) {
         min-height: 20vh;
+        margin-top: 10vh;
      }
     .about{
         display: flex;
@@ -326,6 +327,8 @@ body{
            font-size: 2rem;
            @media screen and (max-width: $small) {
             width: 90%;
+            padding-bottom: 50px;
+            color: rgb(190, 190, 190);
          }
        }
         a{
@@ -370,7 +373,8 @@ body{
     height: 50vh;
     @media screen and (max-width: $small) {
         height: unset;
-        min-height: 40vh;
+        min-height: 40vh;        
+        margin-top: 10vh;
      }
         .container-bars{
             width: 100%;
@@ -470,7 +474,7 @@ body{
 
 .container-projects {
     min-height: 70vh;
-   
+    margin-top: 10vh;
     .projects{
         display: flex;
         justify-content: space-evenly;
@@ -588,8 +592,8 @@ body{
     flex-direction: column;
     position: relative;
     @media screen and (max-width: $small) {
-        min-height: 150vh;
-        top: -200px;
+        min-height: 50vh;
+        padding-bottom: 80px;
     }
     h1{
         margin: 20px;

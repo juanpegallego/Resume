@@ -251,7 +251,8 @@ body {
   align-items: center; }
   @media screen and (max-width: 600px) {
     .container-about {
-      min-height: 20vh; } }
+      min-height: 20vh;
+      margin-top: 10vh; } }
   .container-about .about {
     display: flex;
     justify-content: space-evenly;
@@ -267,7 +268,9 @@ body {
       font-size: 2rem; }
       @media screen and (max-width: 600px) {
         .container-about .about p {
-          width: 90%; } }
+          width: 90%;
+          padding-bottom: 50px;
+          color: #bebebe; } }
     .container-about .about a {
       font-size: 1.5rem;
       text-decoration: none;
@@ -299,7 +302,8 @@ body {
   @media screen and (max-width: 600px) {
     .container-tech {
       height: unset;
-      min-height: 40vh; } }
+      min-height: 40vh;
+      margin-top: 10vh; } }
   .container-tech .container-bars {
     width: 100%;
     display: flex;
@@ -372,7 +376,8 @@ body {
   100% {
     width: 100%; } }
 .container-projects {
-  min-height: 70vh; }
+  min-height: 70vh;
+  margin-top: 10vh; }
   .container-projects .projects {
     display: flex;
     justify-content: space-evenly;
@@ -461,8 +466,8 @@ body {
   position: relative; }
   @media screen and (max-width: 600px) {
     .contact {
-      min-height: 150vh;
-      top: -200px; } }
+      min-height: 50vh;
+      padding-bottom: 80px; } }
   .contact h1 {
     margin: 20px; }
   .contact .form {
