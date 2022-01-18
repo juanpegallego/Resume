@@ -101,6 +101,7 @@ body{
     height: 35vh;  
     min-height: 300px;
     transition: .6s;
+    z-index: 99999;
     background: rgb(43,43,45);
     background: linear-gradient(-90deg, rgba(43,43,45,1) 36%, rgb(32, 45, 94) 90%);
     padding: 15px;
@@ -195,9 +196,7 @@ body{
         justify-content: center;
         flex-direction: row;
         align-items: center;
-        position: relative;
         min-width: 150px;
-        position: relative;
         margin-top: 5px;
         margin-right: auto;            
         background-color: rgba(255, 255, 255, 0.521);
@@ -209,12 +208,12 @@ body{
          }
         a{
             color: transparent;
+            cursor: pointer;
         }
         img{
             margin: 0px 10px;
             width: 30px; 
-            height: 30px;
-            
+            height: 30px;         
             @media screen and (max-width: $small) {
                width: 25px;
                height: 25px;
@@ -227,16 +226,17 @@ body{
                 animation-duration: 10s;
                 
             }
-            &:hover #mail{
-                width: 25px;
-                height: 25px;                
-            }           
+                    
     
         }
         #mail{
             width: 31px;
             height: 38px;
             z-index: 2;
+            &:hover{
+                width: 25px;
+                height: 25px; 
+            }
             @media screen and (max-width: $small) {
                 width: 25px;
                 height:25px;
@@ -356,6 +356,7 @@ body{
         ion-icon{
             font-size: 2.5rem;
             margin-right: 5px;
+            
         }
         &:hover{
             border: 2px solid white;

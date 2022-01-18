@@ -76,6 +76,7 @@ body {
   height: 35vh;
   min-height: 300px;
   transition: .6s;
+  z-index: 99999;
   background: #2b2b2d;
   background: linear-gradient(-90deg, #2b2b2d 36%, #202d5e 90%);
   padding: 15px;
@@ -153,9 +154,7 @@ body {
     justify-content: center;
     flex-direction: row;
     align-items: center;
-    position: relative;
     min-width: 150px;
-    position: relative;
     margin-top: 5px;
     margin-right: auto;
     background-color: rgba(255, 255, 255, 0.521);
@@ -166,7 +165,8 @@ body {
         min-width: 50px;
         margin: auto; } }
     .hi-container .data-container a {
-      color: transparent; }
+      color: transparent;
+      cursor: pointer; }
     .hi-container .data-container img {
       margin: 0px 10px;
       width: 30px;
@@ -181,13 +181,13 @@ body {
         animation-iteration-count: infinite;
         animation-fill-mode: forwards;
         animation-duration: 10s; }
-      .hi-container .data-container img:hover #mail {
-        width: 25px;
-        height: 25px; }
     .hi-container .data-container #mail {
       width: 31px;
       height: 38px;
       z-index: 2; }
+      .hi-container .data-container #mail:hover {
+        width: 25px;
+        height: 25px; }
       @media screen and (max-width: 600px) {
         .hi-container .data-container #mail {
           width: 25px;
