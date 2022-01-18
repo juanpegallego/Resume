@@ -74,6 +74,7 @@ body {
   left: 0px;
   top: 25%;
   height: 35vh;
+  min-height: 300px;
   transition: .6s;
   background: #2b2b2d;
   background: linear-gradient(-90deg, #2b2b2d 36%, #202d5e 90%);
@@ -223,7 +224,8 @@ body {
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  scroll-snap-align: center; }
+  scroll-snap-align: center;
+  opacity: 0; }
   @media screen and (max-width: 600px) {
     .container-about,
     .container-projects,
@@ -248,7 +250,9 @@ body {
   min-height: 50vh;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-top: 50px;
+  transform: translateX(100vw); }
   @media screen and (max-width: 600px) {
     .container-about {
       min-height: 20vh;
@@ -298,7 +302,8 @@ body {
   width: 100%;
   justify-content: space-evenly;
   align-items: center;
-  height: 50vh; }
+  height: 50vh;
+  transform: translateX(-100vw); }
   @media screen and (max-width: 600px) {
     .container-tech {
       height: unset;
@@ -377,7 +382,8 @@ body {
     width: 100%; } }
 .container-projects {
   min-height: 70vh;
-  margin-top: 10vh; }
+  margin-top: 10vh;
+  transform: translateX(100vw); }
   .container-projects .projects {
     display: flex;
     justify-content: space-evenly;
@@ -458,6 +464,10 @@ body {
       font-size: 2.5rem; } }
 
 /*----------------FORM---------------------*/
+.container-contact {
+  transform: translateX(-100vw);
+  padding-bottom: 50px; }
+
 .contact {
   display: flex;
   justify-content: center;
@@ -486,7 +496,8 @@ body {
       border: none;
       color: white;
       background-color: #313131;
-      padding-left: 10px; }
+      padding-left: 10px;
+      cursor: pointer; }
       @media screen and (max-width: 600px) {
         .contact .form input {
           width: 90%; } }
@@ -497,6 +508,8 @@ body {
         color: white;
         font-size: 2rem;
         padding-left: 5px; }
+      .contact .form input:hover {
+        background-color: #6b6a6a; }
     .contact .form textarea {
       margin-top: 20px;
       font-size: 2rem;
@@ -507,7 +520,8 @@ body {
       resize: none;
       background-color: #313131;
       border: none;
-      color: white; }
+      color: white;
+      cursor: pointer; }
       .contact .form textarea::placeholder {
         color: white; }
       @media screen and (max-width: 600px) {
@@ -520,6 +534,8 @@ body {
         color: white;
         font-size: 2rem;
         padding: 5px; }
+      .contact .form textarea:hover {
+        background-color: #6b6a6a; }
     .contact .form button {
       position: relative;
       top: 10px;
