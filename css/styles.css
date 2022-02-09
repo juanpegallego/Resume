@@ -360,11 +360,11 @@ body {
       .container-tech .container-bars .bar:hover .progress {
         animation: progressBar 2s infinite ease-in-out; }
       .container-tech .container-bars .bar .react {
-        width: 85%; }
+        width: 90%; }
       .container-tech .container-bars .bar .js {
         width: 95%; }
       .container-tech .container-bars .bar .node {
-        width: 65%; }
+        width: 75%; }
       .container-tech .container-bars .bar .css {
         width: 100%; }
       .container-tech .container-bars .bar .html {
@@ -432,9 +432,11 @@ body {
             color: white;
             text-align: center; }
             .container-projects .projects .main-container .card a:hover .card-description h3 {
+              width: 90%;
               font-size: 2.5rem; }
             .container-projects .projects .main-container .card a:hover .card-description p {
               font-size: 1.8rem;
+              width: 80%;
               font-style: italic; }
           .container-projects .projects .main-container .card a:hover video {
             filter: contrast(40%) brightness(30%);

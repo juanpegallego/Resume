@@ -438,13 +438,13 @@ body{
                     animation: progressBar 2s infinite ease-in-out;
                 }
                 .react{
-                    width: 85%;
+                    width: 90%;
                 }
                 .js{
                     width: 95%;
                 }
                 .node{
-                    width: 65%;
+                    width: 75%;
                 }
                 .css{
                     width: 100%;
@@ -539,13 +539,15 @@ body{
                         z-index: 1;
                         padding: 10px;
                         color: white;
-
                         text-align: center;
                         h3{
+                            width: 90%;
                             font-size: 2.5rem;
                         }
                         p{
                             font-size: 1.8rem;
+                            
+                            width: 80%;
                             font-style: italic;
                         }
                     }
