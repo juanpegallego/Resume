@@ -9,7 +9,7 @@
 
 body {
   overflow-x: hidden;
-  background-color: #867d7d; }
+  background-color: #f3efef; }
   @media screen and (max-width: 600px) {
     body {
       display: flex;
@@ -43,7 +43,7 @@ body {
   .language:hover {
     background-color: rgba(255, 255, 255, 0.075); }
   .language a img {
-    margin: 10px;
+    margin-left: 30px;
     width: 45px;
     z-index: 1; }
     @media screen and (max-width: 600px) {
@@ -59,7 +59,8 @@ body {
   filter: brightness(50%) contrast(70%);
   width: 100%;
   height: 100%;
-  object-fit: cover; }
+  object-fit: cover;
+  display: none; }
 
 @keyframes girarContacto {
   0% {
@@ -262,7 +263,8 @@ body {
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    color: white; }
+    color: white;
+    color: black; }
     @media screen and (max-width: 600px) {
       .container-about .about {
         justify-content: center; } }
@@ -284,9 +286,10 @@ body {
       justify-content: space-evenly;
       align-items: center;
       padding: 5px 9px;
-      margin: 100px auto;
+      margin: 50px auto;
       background: #2b2b2d;
       background: linear-gradient(90deg, #2b2b2d 36%, #202d5e 90%);
+      border-radius: .5rem;
       box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.195); }
       @media screen and (max-width: 600px) {
         .container-about .about a {
@@ -294,8 +297,6 @@ body {
       .container-about .about a ion-icon {
         font-size: 2.5rem;
         margin-right: 5px; }
-      .container-about .about a:hover {
-        border: 2px solid white; }
 
 .container-tech {
   display: flex;
@@ -413,8 +414,8 @@ body {
   border-radius: 2rem;
   padding: 5px 20px;
   font-family: Monserrat, sans-serif;
-  color: white;
-  text-align: center; }
+  text-align: center;
+  color: #131633; }
   @media screen and (max-width: 600px) {
     .container-tech h1,
     .container-projects h1,
@@ -425,7 +426,8 @@ body {
 /*----------------FORM---------------------*/
 .container-contact {
   transform: translateX(-100vw);
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  margin-top: 10vh; }
 
 .contact {
   display: flex;
@@ -456,19 +458,20 @@ body {
       color: white;
       background-color: #313131;
       padding-left: 10px;
-      cursor: pointer; }
+      background-color: transparent;
+      cursor: pointer;
+      border: 2px solid #131633;
+      border-radius: .5rem; }
       @media screen and (max-width: 600px) {
         .contact .form input {
           width: 90%; } }
       .contact .form input:focus {
-        border: none;
+        border: 2px solid #616699;
         outline: none; }
       .contact .form input::placeholder {
-        color: white;
         font-size: 2rem;
-        padding-left: 5px; }
-      .contact .form input:hover {
-        background-color: #6b6a6a; }
+        padding-left: 5px;
+        color: #131633; }
     .contact .form textarea {
       margin-top: 20px;
       font-size: 2rem;
@@ -477,9 +480,9 @@ body {
       max-width: 450px;
       padding: 4px 10px;
       resize: none;
-      background-color: #313131;
-      border: none;
-      color: white;
+      border: 2px solid #131633;
+      background-color: transparent;
+      border-radius: .5rem;
       cursor: pointer; }
       .contact .form textarea::placeholder {
         color: white; }
@@ -487,14 +490,12 @@ body {
         .contact .form textarea {
           width: 90%; } }
       .contact .form textarea:focus {
-        border: none;
+        border: 2px solid #616699;
         outline: none; }
       .contact .form textarea::placeholder {
-        color: white;
+        color: #131633;
         font-size: 2rem;
         padding: 5px; }
-      .contact .form textarea:hover {
-        background-color: #6b6a6a; }
     .contact .form button {
       position: relative;
       top: 10px;
@@ -507,7 +508,8 @@ body {
       outline: none;
       background: #2b2b2d;
       background: linear-gradient(90deg, #2b2b2d 36%, #202d5e 90%);
-      border: none; }
+      border: none;
+      border-radius: .5rem; }
       @media screen and (max-width: 600px) {
         .contact .form button {
           width: 50%; } }
