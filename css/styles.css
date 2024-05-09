@@ -394,7 +394,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 0 20px;
+  margin: 0 20px 25px 0;
 }
 .container-tech .tech__icons__container .tech__icon img {
   width: 100%;
@@ -432,7 +432,7 @@ body {
   width: 70%;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   z-index: 1;
@@ -449,7 +449,7 @@ body {
 .container-projects .projects .main-container .card {
   display: block;
   width: 300px;
-  margin-top: 20px;
+  margin: 20px;
 }
 .container-projects .projects .main-container .card a {
   display: flex;
