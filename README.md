@@ -1,4 +1,4 @@
-# Juan Gallego portfolio
+# JG Resume
 
 Este es mi porfolio, aqui dejo un poco de informacion acerca de mi y una breve descripcion y links de proyectos en los que he trabajado.
 
