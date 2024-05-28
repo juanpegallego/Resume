@@ -9,7 +9,7 @@ const experiences = [
     "https://juanpegallego.github.io/TorneriaMercedes",
     "Web Torneria Mercedes",
     "Figma, Vanilla Js, SASS, GSAP.",
-    "./GIFS//torneriaMercedes.gif",
+    "./GIFS/torneriamercedes.gif",
   ],
   [
     "https://github.com/juanpegallego/cavaliere/",
