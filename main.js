@@ -119,7 +119,7 @@ async function fetchAndCreateCards() {
       throw new Error("Formato de datos inesperado");
     }
 
-    data.values.slice(1).forEach((row, index) => {
+    data.values.slice(1).reverse.forEach((row, index) => {
       const cardLink = row[0];
       const cardTitle = row[1];
       const cardDescription = row[2];
