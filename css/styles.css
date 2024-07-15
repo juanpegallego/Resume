@@ -394,7 +394,8 @@ body {
   flex-wrap: wrap;
   justify-content: start;
   align-items: center;
-  max-width: 700px;
+  padding-bottom: 20px;
+  max-width: 825px;
 }
 .container-tech .tech__icons__container .tech__icon {
   width: 80px;
@@ -707,4 +708,11 @@ div.contact-wrapper {
 
 div.calendly {
   width: 100%;
+}
+.hi-container {
+  transition: 0.5s;
+}
+.hide_hiContainer {
+  left: -100px !important;
+  transition: 0.2s;
 }

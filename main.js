@@ -75,6 +75,8 @@ const experiences = [
 
 const keycita = "1VIdUg8Hy-6TT_0RrOocC75UfE6jtKpadu63VW_A9Q8o";
 
+//https://docs.google.com/spreadsheets/d/1VIdUg8Hy-6TT_0RrOocC75UfE6jtKpadu63VW_A9Q8o/edit?hl=es&gid=0#gid=0
+
 const projects_URL = `https://sheets.googleapis.com/v4/spreadsheets/${keycita}/values/info!A:D?alt=json&key=AIzaSyBUy5u-IRP0MJzlWsQNpJF_FYD2Caey8do`;
 
 function createCard(index, cardLink, cardTitle, cardDescription, cardVideoSRC) {
@@ -105,21 +107,6 @@ function createCard(index, cardLink, cardTitle, cardDescription, cardVideoSRC) {
   }
 }
 
-/* function fetchSheet(){
-
-}
-
-
-experiences.forEach((experience, index) => {
-  const cardLink = experience[0];
-  const cardTitle = experience[1];
-  const cardDescription = experience[2];
-  const cardVideoSRC = experience[3];
-
-  createCard(index, cardLink, cardTitle, cardDescription, cardVideoSRC);
-});
- */
-
 async function fetchAndCreateCards() {
   try {
     const response = await fetch(projects_URL);
@@ -143,6 +130,15 @@ async function fetchAndCreateCards() {
   } catch (error) {
     console.error("Error al procesar los datos del Google Sheet:", error);
   }
+}
+
+function hiContainer_HideFX() {
+  const containerProjects = document.getElementById("projects");
+  const hiContainer = document.querySelector("hi-container");
+
+  containerProjects.addEventListener("hover", function () {
+    hiContainer.classList.toggle("hide_hiContainer");
+  });
 }
 
 fetchAndCreateCards();
