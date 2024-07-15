@@ -37,6 +37,7 @@ body {
   left: 5px;
   top: 5px;
   position: fixed;
+  z-index: 999999999;
   border-radius: 5%;
 }
 @media screen and (max-width: 600px) {
@@ -386,7 +387,7 @@ body {
   }
 }
 .container-tech .tech__icons__container {
-  width: 50%;
+  width: 100%;
   min-height: 30vh;
   display: flex;
   flex-direction: row;
