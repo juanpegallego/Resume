@@ -73,11 +73,15 @@ const experiences = [
   ],
 ];
 
+const projects_URL =
+  "https://sheets.googleapis.com/v4/spreadsheets/1VIdUg8Hy-6TT_0RrOocC75UfE6jtKpadu63VW_A9Q8o/values/info!A:D?alt=json&key=AIzaSyBUy5u-IRP0MJzlWsQNpJF_FYD2Caey8do";
+
 function createCard(index, cardLink, cardTitle, cardDescription, cardVideoSRC) {
-  if (!(cardLink && cardTitle && cardDescription && cardVideoSRC)) {
+  if (!(cardLink && cardTitle && cardDescription)) {
     console.error("Error, Something is wrong with item index", index);
     return;
   } else {
+    let video = cardVideoSRC || null;
     const container = document.querySelector("div.main-container");
     const card = document.createElement("div");
 
@@ -92,13 +96,18 @@ function createCard(index, cardLink, cardTitle, cardDescription, cardVideoSRC) {
                             ${cardDescription}
                         </p>
                     </div>
-                    <img src="${cardVideoSRC}" autoplay="" muted="" loop="" class="card-video">
+                    <img src="${video}" autoplay="" muted="" loop="" class="card-video">
                 </a>
     `;
 
     container.appendChild(card);
   }
 }
+
+/* function fetchSheet(){
+
+}
+
 
 experiences.forEach((experience, index) => {
   const cardLink = experience[0];
@@ -108,3 +117,31 @@ experiences.forEach((experience, index) => {
 
   createCard(index, cardLink, cardTitle, cardDescription, cardVideoSRC);
 });
+ */
+
+async function fetchAndCreateCards() {
+  try {
+    const response = await fetch(projects_URL);
+    if (!response.ok) {
+      throw new Error("Error al obtener los datos del Google Sheet");
+    }
+    const data = await response.json();
+
+    if (!data.values || !Array.isArray(data.values)) {
+      throw new Error("Formato de datos inesperado");
+    }
+
+    data.values.slice(1).forEach((row, index) => {
+      const cardLink = row[0];
+      const cardTitle = row[1];
+      const cardDescription = row[2];
+      const cardVideoSRC = row[3];
+
+      createCard(index, cardLink, cardTitle, cardDescription, cardVideoSRC);
+    });
+  } catch (error) {
+    console.error("Error al procesar los datos del Google Sheet:", error);
+  }
+}
+
+fetchAndCreateCards();
