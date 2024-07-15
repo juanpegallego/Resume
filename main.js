@@ -119,14 +119,17 @@ async function fetchAndCreateCards() {
       throw new Error("Formato de datos inesperado");
     }
 
-    data.values.slice(1).reverse.forEach((row, index) => {
-      const cardLink = row[0];
-      const cardTitle = row[1];
-      const cardDescription = row[2];
-      const cardVideoSRC = row[3];
+    data.values
+      .slice(1)
+      .reverse()
+      .forEach((row, index) => {
+        const cardLink = row[0];
+        const cardTitle = row[1];
+        const cardDescription = row[2];
+        const cardVideoSRC = row[3];
 
-      createCard(index, cardLink, cardTitle, cardDescription, cardVideoSRC);
-    });
+        createCard(index, cardLink, cardTitle, cardDescription, cardVideoSRC);
+      });
   } catch (error) {
     console.error("Error al procesar los datos del Google Sheet:", error);
   }
