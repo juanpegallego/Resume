@@ -73,8 +73,9 @@ const experiences = [
   ],
 ];
 
-const projects_URL =
-  "https://sheets.googleapis.com/v4/spreadsheets/1VIdUg8Hy-6TT_0RrOocC75UfE6jtKpadu63VW_A9Q8o/values/info!A:D?alt=json&key=AIzaSyBUy5u-IRP0MJzlWsQNpJF_FYD2Caey8do";
+const keycita = "1VIdUg8Hy-6TT_0RrOocC75UfE6jtKpadu63VW_A9Q8o";
+
+const projects_URL = `https://sheets.googleapis.com/v4/spreadsheets/${keycita}/values/info!A:D?alt=json&key=AIzaSyBUy5u-IRP0MJzlWsQNpJF_FYD2Caey8do`;
 
 function createCard(index, cardLink, cardTitle, cardDescription, cardVideoSRC) {
   if (!(cardLink && cardTitle && cardDescription)) {
