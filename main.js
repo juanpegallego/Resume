@@ -141,4 +141,5 @@ function hiContainer_HideFX() {
   });
 }
 
+hiContainer_HideFX();
 fetchAndCreateCards();
